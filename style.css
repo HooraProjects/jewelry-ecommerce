@@ -36,11 +36,17 @@ li{
     cursor: pointer;
     /* display: none; */
 }
+#close-icon{
+    position:absolute;
+    right:88%;
+}
 .right--header--menu{
     list-style-type: none;
     flex-direction: column;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     width:320px;
     height: 100vh;
+    margin-top:0;
     background-color: white;
     position: fixed;
     top: 0;
