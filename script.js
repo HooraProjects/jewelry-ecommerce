@@ -6,6 +6,7 @@ const btnLeft = document.querySelector('#arrow-btn-left');
 const dotsContainer = document.querySelector('.dots');
 const menuIcon = document.querySelector('.menu-icon');
 const sideBar = document.querySelector('.right--header--menu');
+
 sideBar.style.display = "none";
 let i = 0;
 const images =['./assets/images/ring-background-image.jpg','./assets/images/earring-background-image.jpg','./assets/images/ring3-background-image.jpg'];
@@ -54,5 +55,8 @@ dotsContainer.addEventListener('click',function(e){
 })
 menuIcon.addEventListener('click',function(){
     sideBar.style.display = "flex";
+   
+    
+    
 })
 

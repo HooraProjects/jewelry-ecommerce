@@ -60,7 +60,10 @@ li{
 }
 
 .right--header--menu li{
+    display:block;
+
     padding: 1em;
+
 }
 .menu-item.active,.menu-item:hover{
    border:1px solid black
