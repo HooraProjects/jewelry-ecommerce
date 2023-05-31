@@ -7,7 +7,8 @@ const dotsContainer = document.querySelector('.dots');
 const menuIcon = document.querySelector('.menu-icon');
 const sideBar = document.querySelector('.right--header--menu');
 
-sideBar.style.display = "none";
+ sideBar.style.display = "none";
+  
 let i = 0;
 const images =['./assets/images/ring-background-image.jpg','./assets/images/earring-background-image.jpg','./assets/images/ring3-background-image.jpg'];
 function prevImg(){ 
@@ -54,9 +55,12 @@ dotsContainer.addEventListener('click',function(e){
        setImg(i);
 })
 menuIcon.addEventListener('click',function(){
-    sideBar.style.display = "flex";
-   
     
-    
+        sideBar.style.display = "flex";
+           
 })
+
+
+
+
 
