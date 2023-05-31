@@ -4,6 +4,9 @@ const slideImg = document.getElementById('slide');
 const btnRight = document.querySelector('#arrow-btn-right');
 const btnLeft = document.querySelector('#arrow-btn-left');
 const dotsContainer = document.querySelector('.dots');
+const menuIcon = document.querySelector('.menu-icon');
+const sideBar = document.querySelector('.right--header--menu');
+sideBar.style.display = "none";
 let i = 0;
 const images =['./assets/images/ring-background-image.jpg','./assets/images/earring-background-image.jpg','./assets/images/ring3-background-image.jpg'];
 function prevImg(){ 
@@ -48,5 +51,8 @@ dotsContainer.addEventListener('click',function(e){
     e.target.classList.add('dot--active');      
        const i = e.target.getAttribute('data-slide');
        setImg(i);
+})
+menuIcon.addEventListener('click',function(){
+    sideBar.style.display = "flex";
 })
 
