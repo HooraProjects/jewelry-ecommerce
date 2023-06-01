@@ -36,7 +36,7 @@ li{
     cursor: pointer;
     /* display: none; */
 }
-#close-icon{
+.close-icon{
     position:absolute;
     right:88%;
 }
