@@ -53,6 +53,15 @@ li{
     right: 0;
     z-index: 99;
 }
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 10;
+    background-color: rgba(0,0,0,0.5);
+  }
 
 .right--header--menu a{
     text-decoration: none;
@@ -62,13 +71,13 @@ li{
     color: rgb(66, 66, 66);  
    border:1px solid transparent;
     transition:  border .3s ease-in-out;
-   
+
 }
 
 .right--header--menu li{
     display:block;
 
-    padding: 1em;
+    padding: 1rem 2rem 1.15rem;
 
 }
 .menu-item.active,.menu-item:hover{

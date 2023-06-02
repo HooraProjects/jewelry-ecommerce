@@ -10,11 +10,12 @@
     <title>جواهرات آرما</title>
 </head>
 <body>
+    <div class="overlay"></div>
     <header class="arma--header" role="banner">     
         <nav class="right-header">
-            <a class="menu-icon"><i class="fa-solid fa-bars"></i></a>
-            <ul class="right--header--menu" >   
-                <li><a class="close-icon"><i class="fa-solid fa-xmark"></i></a></li>  
+            <a class="menu-icon"><i class="fa-solid fa-bars" ></i></a>
+            <ul class="right--header--menu"  >   
+                <li><a class="close-icon" ><i class="fa-solid fa-xmark"  ></i></a></li>  
                 <li><a href="#" class="menu-item active" id="menu-item-1">آرما</a></li>
                 <li><a href="./armaShop.html" class="menu-item" id="menu-item-2">فروشگاه</a></li>
                 <li><a href="./armaBlog.html" class="menu-item" id="menu-item-3">وبلاگ</a></li>
@@ -49,6 +50,9 @@ const dotsContainer = document.querySelector('.dots');
 const menuIcon = document.querySelector('.menu-icon');
 const sideBar = document.querySelector('.right--header--menu');
 const closeIcon = document.querySelectorAll('.close-icon');
+const overlay = document.querySelector('.overlay')
+overlay.style.display="none"
+console.log(document.body.children);
         let i = 0;
         sideBar.style.display = "none";
 const images =['./assets/images/ring-background-image.jpg','./assets/images/earring-background-image.jpg','./assets/images/ring3-background-image.jpg'];
@@ -98,7 +102,8 @@ dotsContainer.addEventListener('click',function(e){
 menuIcon.addEventListener('click',function(){
     
     sideBar.style.display = "flex";
-       
+    overlay.style.display ="block"
+
 })
 closeIcon.forEach(function(icon){
     icon.addEventListener('click',function(){
