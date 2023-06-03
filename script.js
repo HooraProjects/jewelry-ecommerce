@@ -19,5 +19,6 @@ menuIcon.addEventListener('click',function(){
 closeIcon.forEach(function(icon){
     icon.addEventListener('click',function(){
         sideBar.style.display = "none";
+        overlay.style.display="none";
     })
 })
