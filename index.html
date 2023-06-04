@@ -11,27 +11,46 @@
 </head>
 <body>
     <div class="overlay"></div>
-    <header class="arma--header" role="banner">     
+    <header class="arma--header" role="banner">
         <nav class="right-header">
-            <a class="menu-icon"><i class="fa-solid fa-bars" ></i></a>
-            <ul class="right--header--menu"  >   
-                <li><a class="close-icon" ><i class="fa-solid fa-xmark"  ></i></a></li>  
-                <li><a href="#" class="menu-item active" id="menu-item-1">آرما</a></li>
-                <li><a href="./armaShop.html" class="menu-item" id="menu-item-2">فروشگاه</a></li>
-                <li><a href="./armaBlog.html" class="menu-item" id="menu-item-3">وبلاگ</a></li>
-                <li><a href="./armaAboutUs.html" class="menu-item" id="menu-item-4">درباره ما</a></li>
-                <li><a href="./armaContactUs.html" class="menu-item" id="menu-item-5">تماس با ما</a></li>         
-                    
-            </ul>
+          <a class="menu-icon"><i class="fa-solid fa-bars"></i></a>
+          <ul class="right--header--menu">
+            <li>
+              <a class="close-icon"><i class="fa-solid fa-xmark"></i></a>
+            </li>
+            <li><a href="#" class="menu-item active" id="menu-item-1">آرما</a></li>
+            <li>
+              <a href="./armaShop.html" class="menu-item" id="menu-item-2">فروشگاه</a>
+            </li>
+            <li>
+              <a href="./armaBlog.html" class="menu-item" id="menu-item-3">وبلاگ</a>
+            </li>
+            <li>
+              <a href="./armaAboutUs.html" class="menu-item" id="menu-item-4"
+                >درباره ما</a
+              >
+            </li>
+            <li>
+              <a href="./armaContactUs.html" class="menu-item" id="menu-item-5"
+                >تماس با ما</a
+              >
+            </li>
+          </ul>
         </nav>
-        <img src="./assets/images/logo.png" id="logo--header">
+        
+        <img src="./assets/images/logo.png" id="logo--header" />
         <div class="left-header">
-            
-            <a href="#" class="menu-item-left-header"><i class="fa-solid fa-magnifying-glass"></i></a> 
-            <a href="#" class="menu-item-left-header"><i class="fa-solid fa-cart-shopping"></i></a>
-        </div>    
-        </header>
+          <a href="#" class="menu-item-left-header"
+            ><i class="fa-solid fa-magnifying-glass"></i
+          ></a>
+          <a href="#" class="menu-item-left-header"
+            ><i class="fa-solid fa-cart-shopping"></i
+          ></a>
+        </div>
+      </header>
+      
     <div class="container--home container">
+       
         <div class="slider" id="main--slider">
             <div ><img  class="slide" id="slide" src="./assets/images/ring-background-image.jpg" alt="تصویر بک گراند" ></div> 
            <button class="arrow-btn-slider" id="arrow-btn-right"><i class="fa-solid fa-angle-right"></i></button> 
@@ -52,7 +71,6 @@ const sideBar = document.querySelector('.right--header--menu');
 const closeIcon = document.querySelectorAll('.close-icon');
 const overlay = document.querySelector('.overlay')
 overlay.style.display="none"
-console.log(document.body.children);
         let i = 0;
         sideBar.style.display = "none";
 const images =['./assets/images/ring-background-image.jpg','./assets/images/earring-background-image.jpg','./assets/images/ring3-background-image.jpg'];

@@ -46,48 +46,67 @@
             <div class="container--shop container">
                 <div class="col">
            <div class="product">
-            <img src="./assets/images/necklace.jpg" style="width:400px;height:400px;">
+            <img   src="./assets/images/necklace-shop-lazy.png" data-src="./assets/images/necklace.jpg" class="features-img lazy-img">
            </div>
            <div class="product">
-            <img src="./assets/images/earring1-shop.jpg" style="width:400px;height:400px;">
+            <img src="./assets/images/earring1-shop-lazy.jpg" data-src="./assets/images/earring1-shop.jpg" class="features-img lazy-img">
            </div>
            <div class="product">
-            <img src="./assets/images/bracelet1-shop.jpg" style="width:400px;height:400px;">
+            <img src="./assets/images/bracelet1-shop-lazy.jpg" data-src="./assets/images/bracelet1-shop.jpg" class="features-img lazy-img">
            </div>
            </div>
 
            <div class="col">
             <div class="product">
-             <img src="./assets/images/earring2-shop.jpg" style="width:400px;height:400px;">
+             <img src="./assets/images/earring2-shop-lazy.jpg" data-src="./assets/images/earring1-shop.jpg" class="features-img lazy-img">
             </div>
             <div class="product">
-             <img src="./assets/images/ring1-shop.jpg" style="width:400px;height:400px;">
+             <img src="./assets/images/ring1-shop-lazy.jpg" data-src="./assets/images/ring1-shop.jpg" class="features-img lazy-img">
             </div>
             <div class="product">
-             <img src="./assets/images/rings1-shop.jpg" style="width:400px;height:400px;">
+             <img src="./assets/images/rings1-shop-lazy.jpg" data-src="./assets/images/rings1-shop.jpg" class="features-img lazy-img">
             </div>
             </div>
 
             <div class="col">
                 <div class="product">
-                 <img src="./assets/images/necklace2-shop.jpg" style="width:400px;height:400px;">
+                 <img src="./assets/images/necklace2-shop-lazy.jpg" data-src="./assets/images/necklace2-shop.jpg" class="features-img lazy-img">
                 </div>
                 <div class="product">
-                 <img src="./assets/images/rings2-shop.jpg" style="width:400px;height:400px;">
+                 <img src="./assets/images/rings2-shop-lazy.jpg" data-src="./assets/images/rings2-shop.jpg" class="features-img lazy-img">
                 </div>
                 <div class="product">
-                 <img src="./assets/images/bracelet2-shop.jpg" style="width:400px;height:400px;">
+                 <img src="./assets/images/bracelet2-shop-lazy.jpg" data-src="./assets/images/bracelet2-shop.jpg" class="features-img lazy-img">
                 </div>
-                </div>
-           
-           
-                </div>
-          
-           
-                
+                </div>       
+                </div>               
             </div>
         </div>
         <footer></footer>
-        <script src="./script.js"></script>
+        <script>'use strict';
+            const menuIcon = document.querySelector('.menu-icon');
+            const sideBar = document.querySelector('.right--header--menu');
+            const closeIcon = document.querySelectorAll('.close-icon');
+            const overlay = document.querySelector('.overlay')
+            overlay.style.display="none"
+             sideBar.style.display = "none";          
+            
+            menuIcon.addEventListener('click',function(){
+                
+                 sideBar.style.display = "flex";
+                 overlay.style.display="block";      
+                       
+            })
+            closeIcon.forEach(function(icon){
+                icon.addEventListener('click',function(){
+                    sideBar.style.display = "none";
+                    overlay.style.display="none";
+                })
+            })
+            
+      // lazy loading images
+    
+
+            </script>
 </body>
 </html>
