@@ -58,7 +58,7 @@
 
            <div class="col">
             <div class="product">
-             <img src="./assets/images/earring2-shop-lazy.jpg" data-src="./assets/images/earring1-shop.jpg" class="features-img lazy-img">
+             <img src="./assets/images/earring2-shop-lazy.jpg" data-src="./assets/images/earring2-shop.jpg" class="features-img lazy-img">
             </div>
             <div class="product">
              <img src="./assets/images/ring1-shop-lazy.jpg" data-src="./assets/images/ring1-shop.jpg" class="features-img lazy-img">
@@ -105,8 +105,24 @@
             })
             
       // lazy loading images
-    
+  const imageTargets = document.querySelectorAll('img[data-src]');
 
+let imageOptions ={
+
+}
+let observer = new IntersectionObserver((entries,observer)=>{
+    entries.forEach(entry=>{
+        if(!entry.isIntersecting) return;
+        const image = entry.target;
+        const newUrl = image.getAttribute('data-src');
+    image.src = newUrl;
+    observer.unobserve(image);
+    })
+},imageOptions);
+
+imageTargets.forEach((image)=>{
+    observer.observe(image)
+})
             </script>
 </body>
 </html>

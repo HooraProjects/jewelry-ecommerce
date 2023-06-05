@@ -55,7 +55,10 @@ li{
     overflow: hidden;
     white-space: nowrap;
 }
-
+.lazy-img{
+    width:500px;
+    height: 400px;
+}
 
 .fa-bars{
     font-size:26px;
