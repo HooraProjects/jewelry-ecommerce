@@ -46,36 +46,63 @@
             <div class="container--shop container">
                 <div class="col">
            <div class="product">
-            <img   src="./assets/images/necklace-shop-lazy.png" data-src="./assets/images/necklace.jpg" class="features-img lazy-img">
+            <div class="overlay-lazy-img">
+                <div class="more-link"><a href="#">اطلاعات بیشتر</a></div>
+            </div>
+            <img   src="./assets/images/necklace-shop-lazy.png" data-src="./assets/images/necklace.jpg"  id="lazyImage" class="features-img lazy-img">
            </div>
            <div class="product">
+            <div class="overlay-lazy-img">
+                <div class="more-link"><a href="#">اطلاعات بیشتر</a></div>
+            </div>
             <img src="./assets/images/earring1-shop-lazy.jpg" data-src="./assets/images/earring1-shop.jpg" class="features-img lazy-img">
            </div>
            <div class="product">
+            <div class="overlay-lazy-img">
+                <div class="more-link"><a href="#">اطلاعات بیشتر</a></div>
+            </div>
             <img src="./assets/images/bracelet1-shop-lazy.jpg" data-src="./assets/images/bracelet1-shop.jpg" class="features-img lazy-img">
            </div>
            </div>
 
            <div class="col">
             <div class="product">
+                <div class="overlay-lazy-img">
+                    <div class="more-link"><a href="#">اطلاعات بیشتر</a></div>
+                </div>
              <img src="./assets/images/earring2-shop-lazy.jpg" data-src="./assets/images/earring2-shop.jpg" class="features-img lazy-img">
             </div>
             <div class="product">
+                <div class="overlay-lazy-img">
+                    <div class="more-link"><a href="#">اطلاعات بیشتر</a></div>
+                </div>
              <img src="./assets/images/ring1-shop-lazy.jpg" data-src="./assets/images/ring1-shop.jpg" class="features-img lazy-img">
             </div>
             <div class="product">
+                <div class="overlay-lazy-img">
+                    <div class="more-link"><a href="#">اطلاعات بیشتر</a></div>
+                </div>
              <img src="./assets/images/rings1-shop-lazy.jpg" data-src="./assets/images/rings1-shop.jpg" class="features-img lazy-img">
             </div>
             </div>
 
             <div class="col">
                 <div class="product">
+                    <div class="overlay-lazy-img">
+                        <div class="more-link"><a href="#">اطلاعات بیشتر</a></div>
+                    </div>
                  <img src="./assets/images/necklace2-shop-lazy.jpg" data-src="./assets/images/necklace2-shop.jpg" class="features-img lazy-img">
                 </div>
                 <div class="product">
+                    <div class="overlay-lazy-img">
+                        <div class="more-link"><a href="#">اطلاعات بیشتر</a></div>
+                    </div>
                  <img src="./assets/images/rings2-shop-lazy.jpg" data-src="./assets/images/rings2-shop.jpg" class="features-img lazy-img">
                 </div>
                 <div class="product">
+                    <div class="overlay-lazy-img">
+                        <div class="more-link"><a href="#">اطلاعات بیشتر</a></div>
+                    </div>
                  <img src="./assets/images/bracelet2-shop-lazy.jpg" data-src="./assets/images/bracelet2-shop.jpg" class="features-img lazy-img">
                 </div>
                 </div>       
@@ -121,8 +148,10 @@ let observer = new IntersectionObserver((entries,observer)=>{
 },imageOptions);
 
 imageTargets.forEach((image)=>{
-    observer.observe(image)
+    observer.observe(image);
 })
+
+
             </script>
 </body>
 </html>
