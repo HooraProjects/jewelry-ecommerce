@@ -34,12 +34,12 @@
         
             <div class="shop-top-sidebar">
                 <ul class="product-categories">
-                    <li class="cat-item"><a href="#">آویز</a></li>
-                    <li class="cat-item"><a href="#">انگشتر</a></li>
-                    <li class="cat-item"><a href="#">حلقه</a></li>
-                    <li class="cat-item"><a href="#">دستبند</a></li>
-                    <li class="cat-item"><a href="#">گردنبند</a></li>
-                    <li class="cat-item"><a href="#">گوشواره</a></li>
+                    <li class="cat-item" data-id="1"><a href="#">آویز</a></li>
+                    <li class="cat-item" data-id="2"><a href="#">انگشتر</a></li>
+                    <li class="cat-item" data-id="3"><a href="#">حلقه</a></li>
+                    <li class="cat-item" data-id="4"><a href="#">دستبند</a></li>
+                    <li class="cat-item" data-id="5"><a href="#">گردنبند</a></li>
+                    <li class="cat-item" data-id="6"><a href="#">گوشواره</a></li>
                 </ul>
             </div>
             <div class="result"></div>
@@ -109,8 +109,29 @@
                 </div>               
             </div>
         </div>
-        <footer></footer>
-        <script>'use strict';
+        <footer>
+            <div class="wpb-wrapper">
+                <div class="links-footer">
+                  <a href="#">جواهرات آرما</a>
+                  <a href="#">تضمین برگشت / معاوضه کالا</a>
+                  <a href="#">باشگاه مشتریان</a>
+                  <a href="#">درباره ما / تماس با ما</a>
+                </div>
+                
+                <div><small>تمامی حقوق مادی و معنوی این وبسایت متعلق به جواهری آرما می‌باشد</small></div>
+               </div>
+          
+               <div class="wpb-wrapper">
+                <div class="join-club-footer-title"><p>عضویت در خبرنامه</p></div>
+                <div class="join-club-footer">
+                  <input type="email" placeholder="ایمیل شما">
+                <input type="submit" value="عضویت">
+                </div>
+                
+               </div>
+        </footer>
+        <script>
+        'use strict';
             const menuIcon = document.querySelector('.menu-icon');
             const sideBar = document.querySelector('.right--header--menu');
             const closeIcon = document.querySelectorAll('.close-icon');
@@ -121,7 +142,11 @@
             menuIcon.addEventListener('click',function(){
                 
                  sideBar.style.display = "flex";
-                 overlay.style.display="block";      
+                 overlay.style.display="block";    
+                 overlay.addEventListener('click',function(){
+        sideBar.style.display = "none";
+        overlay.style.display="none";
+      })
                        
             })
             closeIcon.forEach(function(icon){
@@ -150,6 +175,8 @@ let observer = new IntersectionObserver((entries,observer)=>{
 imageTargets.forEach((image)=>{
     observer.observe(image);
 })
+
+   
 
 
             </script>
