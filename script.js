@@ -1,7 +1,7 @@
 'use strict';
 const menuIcon = document.querySelector('.menu-icon');
 const sideBar = document.querySelector('.right--header--menu');
-const closeIcon = document.querySelectorAll('.close-icon');
+
 const overlay = document.querySelector('.overlay');
 
 const header = ` <nav class="right-header">
@@ -72,20 +72,51 @@ overlay.style.display="none"
  
 
 
-menuIcon.addEventListener('click',function(){
+//  menuIcon.addEventListener('click',function(){
     
-     sideBar.style.display = "flex";
-     overlay.style.display="block";
-     overlay.addEventListener('click',function(){
-        sideBar.style.display = "none";
-        overlay.style.display="none";
-      })
+//     sideBar.style.display = "flex";
+//     overlay.style.display="block";
+//     overlay.addEventListener('click',function(){
+//        sideBar.style.display = "none";
+//        overlay.style.display="none";
+//      })
+   
+          
+// })
+
+
+for (const menu of document.querySelectorAll('.menu-icon')){
+    menu.addEventListener('click',function(){
+        document.querySelectorAll('.right--header--menu').forEach(function(sidebar){
+            sidebar.style.display = "flex";
+            overlay.style.display = "block";
+            document.querySelectorAll('.overlay').forEach(function(over){
+             over.style.display ="none";
+            })
+             })
+    })
+
+
+
+}
+
+   
+          
+
+        
+
+ 
+
     
            
-})
-closeIcon.forEach(function(icon){
+
+document.querySelectorAll('.close-icon').forEach(function(icon){
     icon.addEventListener('click',function(){
-        sideBar.style.display = "none";
-        overlay.style.display="none";
+        document.querySelectorAll('.right--header--menu').forEach(function(sidebar){
+       sidebar.style.display = "none";
+       document.querySelectorAll('.overlay').forEach(function(over){
+        over.style.display ="none";
+       })
+        })
     })
 })
