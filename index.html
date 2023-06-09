@@ -11,7 +11,8 @@
 </head>
 <body>
     <div class="overlay"></div>
-    <header class="arma--header" role="banner">
+
+      <header class="arma--header" role="banner">
         <nav class="right-header">
           <a class="menu-icon"><i class="fa-solid fa-bars"></i></a>
           <ul class="right--header--menu">
@@ -48,6 +49,8 @@
           ></a>
         </div>
       </header>
+  
+    
       
     <div class="container--home container">
       
@@ -59,26 +62,8 @@
            <div class="dots" id="slider--dots"></div>
         </div>
     </div>
-    <footer>
-     <div class="wpb-wrapper">
-      <div class="links-footer">
-        <a href="#">جواهرات آرما</a>
-        <a href="#">تضمین برگشت / معاوضه کالا</a>
-        <a href="#">باشگاه مشتریان</a>
-        <a href="#">درباره ما / تماس با ما</a>
-      </div>
-      
-      <div><small>تمامی حقوق مادی و معنوی این وبسایت متعلق به جواهری آرما می‌باشد</small></div>
-     </div>
+    <footer id="footer">
 
-     <div class="wpb-wrapper">
-      <div class="join-club-footer-title"><p>عضویت در خبرنامه</p></div>
-      <div class="join-club-footer">
-        <input type="email" placeholder="ایمیل شما">
-      <input type="submit" value="عضویت">
-      </div>
-      
-     </div>
     </footer>
     <script >
         'use strict';
@@ -157,6 +142,28 @@ closeIcon.forEach(function(icon){
 })
 
 
+const footer  = `<div class="footer">
+
+<div class="wpb-wrapper">
+<div class="links-footer">
+  <a href="#">جواهرات آرما</a>
+  <a href="#">تضمین برگشت / معاوضه کالا</a>
+  <a href="#">باشگاه مشتریان</a>
+  <a href="#">درباره ما / تماس با ما</a>
+</div>
+
+<div><small>تمامی حقوق مادی و معنوی این وبسایت متعلق به جواهری آرما می‌باشد</small></div>
+</div>
+
+<div class="wpb-wrapper">
+<div class="join-club-footer-title"><p>عضویت در خبرنامه</p></div>
+<div class="join-club-footer">
+  <input type="email" placeholder="ایمیل شما">
+<input type="submit" value="عضویت">
+</div>
+
+</div></div>`;
+document.getElementById('footer').innerHTML = footer;
 
     </script>
 </body>
