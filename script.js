@@ -72,17 +72,8 @@ overlay.style.display="none"
  
 
 
-//  menuIcon.addEventListener('click',function(){
-    
-//     sideBar.style.display = "flex";
-//     overlay.style.display="block";
-//     overlay.addEventListener('click',function(){
-//        sideBar.style.display = "none";
-//        overlay.style.display="none";
-//      })
-   
-          
-// })
+
+
 
 
 for (const menu of document.querySelectorAll('.menu-icon')){

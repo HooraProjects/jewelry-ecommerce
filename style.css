@@ -30,13 +30,44 @@ body {
 .container--shop .col{
   margin: 0 auto;;
 }
+.orderby{
+    width: 240px;
+    height: 25px;
+    padding: 15px;
+    cursor: pointer;
+    font-size: 15px;
+    font-family: Shabnam;
+}
+.result{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 2%;
+}
+.orderby option {
+    width: 240px;
+    padding: 10px 15px;
+    height: 20px;
+    cursor: pointer;
+    background-color: transparent;
+    color: #1d4f62;
+  }
+  
+ .orderby option:hover {
+  
+    padding-left: 25px;
+    width: 200px;
+    
+  }
+
 .container--shop{
+    margin-top: 1%;
     
     width:100%;
    margin-left: auto !important;
    margin-right: auto !important;
     display: grid;
-    grid-template-columns: 33.33% 33.33% 33.33%;
+    grid-template-columns: 33.3% 33.3% 33.3%;
 }
 .shop-top-sidebar .product-categories li a{
     text-decoration: none;
@@ -61,7 +92,7 @@ li{
     white-space: nowrap;
 }
 .lazy-img{
-    width:500px;
+    width:450px;
     height: 400px;
     cursor: pointer;
 }
@@ -75,7 +106,6 @@ li{
   width: 100%;
   max-height: 400px;
   opacity: 0;
-  transition: 0.75s ease;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -114,6 +144,8 @@ li{
 }
 .product:hover .overlay-lazy-img{
     opacity: 1;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    transition: .3s ease;
 }
 .product{
     position: relative;
