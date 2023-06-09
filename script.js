@@ -3,6 +3,7 @@ const menuIcon = document.querySelector('.menu-icon');
 const sideBar = document.querySelector('.right--header--menu');
 const closeIcon = document.querySelectorAll('.close-icon');
 const overlay = document.querySelector('.overlay');
+
 const header = ` <nav class="right-header">
 <a class="menu-icon"><i class="fa-solid fa-bars"></i></a>
 <ul class="right--header--menu">
@@ -66,10 +67,6 @@ document.querySelectorAll('footer').forEach(function(f){
 document.querySelectorAll('header').forEach(function(h){
     h.innerHTML= header;
 })
-
-
-
-
 overlay.style.display="none"
  sideBar.style.display = "none";
  
