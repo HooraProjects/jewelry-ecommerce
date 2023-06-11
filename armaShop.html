@@ -44,12 +44,15 @@
             </div>
            <div class="result">
             <i class="fa-solid fa-filter"></i>
-            <select class="orderby">
-                <option value="popularity">مرتب سازی بر اساس محبوب ترین</option>
-                <option value="price">مرتب سازی بر اساس ارزان ترین</option>
-                <option value="price-desc">مرتب سازی بر اساس گران ترین</option>
-                <option value="rating">مرتب سازی بر اساس امتیاز</option>
-            </select>
+            <div class="select">
+                <select name="orderby" class="orderby">
+                    <option value="popularity">مرتب سازی بر اساس محبوب ترین</option>
+                    <option value="price">مرتب سازی بر اساس ارزان ترین</option>
+                    <option value="price-desc">مرتب سازی بر اساس گران ترین</option>
+                    <option value="rating">مرتب سازی بر اساس امتیاز</option>
+                </select>
+            </div>
+           
         </div>
             <div class="container--shop container">
                 
@@ -184,8 +187,6 @@ let observer = new IntersectionObserver((entries,observer)=>{
 imageTargets.forEach((image)=>{
     observer.observe(image);
 })
-
-   
 
 
             </script>
