@@ -55,6 +55,7 @@
            
         </div>
             <div class="container--shop container">
+                <div class="filter-sidebar"></div>
                 
                 <div class="col">
            <div class="product">
@@ -147,9 +148,15 @@
             const menuIcon = document.querySelector('.menu-icon');
             const sideBar = document.querySelector('.right--header--menu');
             const closeIcon = document.querySelectorAll('.close-icon');
-            const overlay = document.querySelector('.overlay')
+            const overlay = document.querySelector('.overlay');
+            const filterSidebar = document.querySelector('.filter-sidebar');
+            const filterIcon = document.querySelector('.fa-filter');
+            filterSidebar.style.display = "none";
             overlay.style.display="none"
-             sideBar.style.display = "none";          
+             sideBar.style.display = "none";   
+             filterIcon.addEventListener('click',function(){
+                filterSidebar.style.display = "flex";
+             })       
             
             menuIcon.addEventListener('click',function(){
                 

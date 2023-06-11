@@ -79,7 +79,7 @@
 
     </footer>
     <script >
-        'use strict';
+      'use strict';
 const slider = document.querySelector('.slider');
 const slideImg = document.getElementById('slide');
 const btnRight = document.querySelector('#arrow-btn-right');
@@ -90,79 +90,84 @@ const sideBar = document.querySelector('.right--header--menu');
 const closeIcon = document.querySelectorAll('.close-icon');
 const overlay = document.querySelector('.overlay')
 overlay.style.display="none"
-        let i = 0;
-        sideBar.style.display = "none";
+      let i = 0;
+      sideBar.style.display = "none";
 const images =['./assets/images/ring-background-image.jpg','./assets/images/earring-background-image.jpg','./assets/images/ring3-background-image.jpg'];
 function prevImg(){ 
-    if( i <= 0)  i=images.length;
-    i--;
-    setImg(i);
-    activateDot(i);     
+  if( i <= 0)  i=images.length;
+  i--;
+  setImg(i);
+  activateDot(i);     
 }
 function nextImg(){
-    if(i >= images.length-1) i = -1;
-    i++;  
-   setImg(i);
-   activateDot(i);  
+  if(i >= images.length-1) i = -1;
+  i++;  
+ setImg(i);
+ activateDot(i);  
 }
- btnRight.addEventListener('click',nextImg);
+btnRight.addEventListener('click',nextImg);
 btnLeft.addEventListener('click',prevImg);
 
 const setImg = function(i){
-    slideImg.src = images[i];
-    activateDot(i);
+  slideImg.src = images[i];
+  activateDot(i);
 }
 const createDots = function(){
-    images.forEach(function(s,i){
-        dotsContainer.insertAdjacentHTML('beforeend',`<div class="dot" data-slide="${i}"></div>`);
-    })
+  images.forEach(function(s,i){
+      dotsContainer.insertAdjacentHTML('beforeend',`<div class="dot" data-slide="${i}"></div>`);
+  })
 }
 const activateDot = function(i){
-    document.querySelectorAll(`.dot`).forEach(function(dot){
-        dot.classList.remove('dot--active');
-        
-    })
-    document.querySelector(`.dot[data-slide="${i}"]`).classList.add('dot--active');
-    
+  document.querySelectorAll(`.dot`).forEach(function(dot){
+      dot.classList.remove('dot--active');
+      
+  })
+  document.querySelector(`.dot[data-slide="${i}"]`).classList.add('dot--active');
+  
 }
 createDots();
 activateDot(0);
 document.addEventListener('keydown',function(e){
-    (e.key === 'ArrowLeft') && prevImg();
-    (e.key === 'ArrowRight') && nextImg();
+  (e.key === 'ArrowLeft') && prevImg();
+  (e.key === 'ArrowRight') && nextImg();
 })
 dotsContainer.addEventListener('click',function(e){
-    e.target.classList.add('dot--active');      
-       const i = e.target.getAttribute('data-slide');
-       setImg(i);
+  e.target.classList.add('dot--active');      
+     const i = e.target.getAttribute('data-slide');
+     setImg(i);
 })
 menuIcon.addEventListener('click',function(){
-    
-    sideBar.style.display = "flex";
-    overlay.style.display ="block";
-    overlay.addEventListener('click',function(){
-      sideBar.style.display = "none";
-      overlay.style.display="none";
-    })
+  
+  sideBar.style.display = "flex";
+  overlay.style.display ="block";
+  overlay.addEventListener('click',function(){
+    sideBar.style.display = "none";
+    overlay.style.display="none";
+  })
 
 
 })
 closeIcon.forEach(function(icon){
-    icon.addEventListener('click',function(){
-        sideBar.style.display = "none";
-        overlay.style.display="none";
-    })
+  icon.addEventListener('click',function(){
+      sideBar.style.display = "none";
+      overlay.style.display="none";
+  })
 })
 
 
-const footer  = `<div class="footer">
+const footer  = `<div class="footer" style="display: flex;
+
+justify-content: space-around;
+background-color: #F6F6F8;
+height: 150px;
+width: 100%;">
 
 <div class="wpb-wrapper">
 <div class="links-footer">
-  <a href="#">جواهرات آرما</a>
-  <a href="#">تضمین برگشت / معاوضه کالا</a>
-  <a href="#">باشگاه مشتریان</a>
-  <a href="#">درباره ما / تماس با ما</a>
+<a href="#">جواهرات آرما</a>
+<a href="#">تضمین برگشت / معاوضه کالا</a>
+<a href="#">باشگاه مشتریان</a>
+<a href="#">درباره ما / تماس با ما</a>
 </div>
 
 <div><small>تمامی حقوق مادی و معنوی این وبسایت متعلق به جواهری آرما می‌باشد</small></div>
@@ -171,13 +176,12 @@ const footer  = `<div class="footer">
 <div class="wpb-wrapper">
 <div class="join-club-footer-title"><p>عضویت در خبرنامه</p></div>
 <div class="join-club-footer">
-  <input type="email" placeholder="ایمیل شما">
+<input type="email" placeholder="ایمیل شما">
 <input type="submit" value="عضویت">
 </div>
 
 </div></div>`;
 document.getElementById('footer').innerHTML = footer;
-
-    </script>
+</script>
 </body>
 </html>

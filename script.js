@@ -39,7 +39,12 @@ const header = ` <nav class="right-header">
   ><i class="fa-solid fa-cart-shopping"></i
 ></a>
 </div>`;
-const footer  = `<div class="footer">
+const footer  = `<div class="footer" style="display: flex;
+
+justify-content: space-around;
+background-color: #F6F6F8;
+height: 150px;
+width: 100%;">
 
 <div class="wpb-wrapper">
 <div class="links-footer">

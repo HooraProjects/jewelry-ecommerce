@@ -11,7 +11,19 @@ body {
     font-family:Shabnam;
 }
 
-
+.filter-sidebar{
+    list-style-type: none;
+    flex-direction: column;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    width:270px;
+    height: 100vh;
+    margin-top:0;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 99;
+}
 
 .most-visited-products-container{
     display: flex;
@@ -38,6 +50,7 @@ body {
 }
 .img-most-visited{
     width: 90%;
+    cursor: pointer;
     
 }
 .product-categories:hover li { opacity:0.5; }
