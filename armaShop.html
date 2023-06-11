@@ -55,8 +55,18 @@
            
         </div>
             <div class="container--shop container">
-                <div class="filter-sidebar"></div>
-                
+                <div class="filter-sidebar">
+                    <div class="filter-content">
+                        <a class="close-icon-filter"><i class="fa-solid fa-xmark"></i></a>
+                    <h3>فیلتر بر اساس قیمت</h3>
+                    <div class="price-label">
+                        قیمت :0 تومان -۱۵۰۰۰۰۰۰۰۰  
+                    </div>
+                        <input type="range" min="0" max="10" value="0" class="slider" id="myRange">
+                        <button class="btn-filter">فیلتر</button>
+                    </div>
+                    
+                </div>
                 <div class="col">
            <div class="product">
             <div class="overlay-lazy-img">
@@ -151,12 +161,16 @@
             const overlay = document.querySelector('.overlay');
             const filterSidebar = document.querySelector('.filter-sidebar');
             const filterIcon = document.querySelector('.fa-filter');
+            const closeFilterIcon = document.querySelector('.close-icon-filter');
             filterSidebar.style.display = "none";
             overlay.style.display="none"
              sideBar.style.display = "none";   
              filterIcon.addEventListener('click',function(){
                 filterSidebar.style.display = "flex";
-             })       
+             })  
+             closeFilterIcon.addEventListener('click',function(){
+                filterSidebar.style.display="none";
+             })     
             
             menuIcon.addEventListener('click',function(){
                 
