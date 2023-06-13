@@ -13,12 +13,12 @@ body {
 .btn-filter{
     cursor: pointer;
     width:75px;
-    height: 75px;
+    height: 55px;
     border-radius: 10px;
     border: none;
     padding: 0 20px;
     background-color:transparent;
-    border: 2px solid black;
+    border: 1px solid black;
     font-family: Shabnam;
     font-weight: bold;
 }
@@ -90,9 +90,10 @@ body {
 }
 .orderby{
     outline: none;
-    width: 260px;
-    height: 3em;
+    width: 250px;
+    height: 0.4em;
     padding: 25px;
+    border-radius: 25px;
     font-size: 15px;
     font-family: Shabnam;
     cursor: pointer;
@@ -226,7 +227,7 @@ li{
 .filter-content{
     padding:2%;
     width: 100%;
-    height: 150px;
+    height: 170px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;

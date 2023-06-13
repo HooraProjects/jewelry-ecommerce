@@ -86,9 +86,7 @@ for (const menu of document.querySelectorAll('.menu-icon')){
         document.querySelectorAll('.right--header--menu').forEach(function(sidebar){
             sidebar.style.display = "flex";
             overlay.style.display = "block";
-            document.querySelectorAll('.overlay').forEach(function(over){
-             over.style.display ="none";
-            })
+          
              })
     })
 

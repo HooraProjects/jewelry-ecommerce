@@ -62,7 +62,7 @@
                     <div class="price-label">
                         قیمت :0 تومان -۱۵۰۰۰۰۰۰۰۰  
                     </div>
-                        <input type="range" min="0" max="10" value="0" class="slider" id="myRange">
+                        <input type="range" min="0" max="100" value="0" class="range-slider" id="myRange" step="1">
                         <button class="btn-filter">فیلتر</button>
                     </div>
                     
@@ -70,7 +70,8 @@
                 <div class="col">
            <div class="product">
             <div class="overlay-lazy-img">
-                <div class="more-link"><a href="#">اطلاعات بیشتر</a></div>
+                <div class="more-link"><a href="#">اطلاعات بیشتر
+                </a></div>
             </div>
             <img   src="./assets/images/necklace-shop-lazy.png" data-src="./assets/images/necklace.jpg"  id="lazyImage" class="features-img lazy-img">
            </div>
@@ -162,6 +163,10 @@
             const filterSidebar = document.querySelector('.filter-sidebar');
             const filterIcon = document.querySelector('.fa-filter');
             const closeFilterIcon = document.querySelector('.close-icon-filter');
+            const rangeSlider = document.getElementById('myRange');
+            rangeSlider.addEventListener('input',function(e){
+                console.log(e.target.value);
+            })
             filterSidebar.style.display = "none";
             overlay.style.display="none"
              sideBar.style.display = "none";   
