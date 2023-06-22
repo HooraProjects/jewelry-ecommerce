@@ -10,6 +10,31 @@ body {
     height: 100%;
     font-family:Shabnam;
 }
+.fa-phone-flip, .fa-whatsapp, .fa-envelope, .fa-map-location{
+    cursor: pointer;
+}
+.fa-phone-flip:hover{
+    animation: cgPhone 0.4s;
+}
+.fa-whatsapp:hover{
+    animation: cgWhatsapp 0.4s;
+}
+.fa-phone-flip:hover{
+    color: #B2283B;
+    transform:scale(1.2);
+}
+.fa-whatsapp:hover{
+    color:#43BF53;
+    transform: scale(1.2);
+}
+.fa-envelope:hover{
+    color:#0072B8;
+    transform: scale(1.2);
+}
+.fa-map-location:hover{
+    color: #F75513;
+    transform: scale(1.2);
+}
 .btn-filter{
     cursor: pointer;
     width:75px;
