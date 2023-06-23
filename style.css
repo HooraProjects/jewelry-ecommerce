@@ -68,15 +68,6 @@ body {
     z-index: 99;
 }
 
-.most-visited-products-container{
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-  
-
-
-
-}
 .most-visited-title{
    
     display: flex;
@@ -115,9 +106,7 @@ body {
 .shop-top-sidebar .product-categories .cat-item{
  padding: 15px 30px;
 }
-.container--shop .col{
-  margin: 0 auto;;
-}
+
 .orderby{
     outline: none;
     width: 250px;
@@ -156,14 +145,26 @@ body {
 
 
 .container--shop{
-    margin-top: 1%;
+   
     
     width:100%;
-   margin-left: auto !important;
-   margin-right: auto !important;
-    display: grid;
-    grid-template-columns: 33.3% 33.3% 33.3%;
+  margin:1% auto;
+  
 }
+.product{
+    height: 400px;
+}
+.product-list{
+  display: grid;
+  grid-template-columns: 33.3% 33.3% 33.3%;
+}
+.col{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .shop-top-sidebar .product-categories li a{
     text-decoration: none;
     color: rgb(66, 66, 66);  
@@ -187,65 +188,39 @@ li{
     white-space: nowrap;
 }
 .lazy-img{
-    width:450px;
+    width:400px;
     height: 400px;
     cursor: pointer;
+    padding: 2%;
     
 }
 
 .overlay-lazy-img{
     position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
   width: 100%;
   max-height: 400px;
   opacity: 0;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  flex-direction: column;
   background-color: rgba(0, 0, 0, 0.518);
-}
-.more-link{
-    left: 0;
-    bottom: 0;
-    right: 0;
-    margin-bottom: 0;
-    padding-bottom: 0;
-    background-color: rgba(0, 0, 0, 0.518);
-    width: 100%;
-    height: 2.5em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-   
-
-   
+  display: flex;
+  flex-direction: column;
 }
 
 
-.more-link a{
 
-   
-    color:white;
-    text-decoration: none;
-   
-    
-}
+
 
 .product:hover .lazy-img{
     opacity:0.6;
 }
-.product:hover .overlay-lazy-img{
+.lazy-img:hover .overlay-lazy-img{
     opacity: 1;
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
     transition: .3s ease;
 }
-.product{
-    position: relative;
-}
+
 .fa-bars{
     font-size:20px;
     float: right;

@@ -71,70 +71,18 @@
                 </div>
                 
             </div>
-            
-                <div class="col">
-           <div class="product">
-            <div class="overlay-lazy-img">
-                <div class="more-link"><a href="#">اطلاعات بیشتر
-                </a></div>
-            </div>
-            <img   src="./assets/images/necklace-shop-lazy.png" data-src="./assets/images/necklace.jpg"  id="lazyImage" class="features-img lazy-img">
-           </div>
-           <div class="product">
-            <div class="overlay-lazy-img">
-                <div class="more-link"><a href="#">اطلاعات بیشتر</a></div>
-            </div>
-            <img src="./assets/images/earring1-shop-lazy.jpg" data-src="./assets/images/earring1-shop.jpg" class="features-img lazy-img">
-           </div>
-           <div class="product">
-            <div class="overlay-lazy-img">
-                <div class="more-link"><a href="#">اطلاعات بیشتر</a></div>
-            </div>
-            <img src="./assets/images/bracelet1-shop-lazy.jpg" data-src="./assets/images/bracelet1-shop.jpg" class="features-img lazy-img">
-           </div>
-           </div>
+            <div class="product-list">
+                <div class="col col-1">
 
-           <div class="col">
-            <div class="product">
-                <div class="overlay-lazy-img">
-                    <div class="more-link"><a href="#">اطلاعات بیشتر</a></div>
                 </div>
-             <img src="./assets/images/earring2-shop-lazy.jpg" data-src="./assets/images/earring2-shop.jpg" class="features-img lazy-img">
-            </div>
-            <div class="product">
-                <div class="overlay-lazy-img">
-                    <div class="more-link"><a href="#">اطلاعات بیشتر</a></div>
-                </div>
-             <img src="./assets/images/ring1-shop-lazy.jpg" data-src="./assets/images/ring1-shop.jpg" class="features-img lazy-img">
-            </div>
-            <div class="product">
-                <div class="overlay-lazy-img">
-                    <div class="more-link"><a href="#">اطلاعات بیشتر</a></div>
-                </div>
-             <img src="./assets/images/rings1-shop-lazy.jpg" data-src="./assets/images/rings1-shop.jpg" class="features-img lazy-img">
-            </div>
-            </div>
+                <div class="col col-2">
 
-            <div class="col">
-                <div class="product">
-                    <div class="overlay-lazy-img">
-                        <div class="more-link"><a href="#">اطلاعات بیشتر</a></div>
-                    </div>
-                 <img src="./assets/images/necklace2-shop-lazy.jpg" data-src="./assets/images/necklace2-shop.jpg" class="features-img lazy-img">
                 </div>
-                <div class="product">
-                    <div class="overlay-lazy-img">
-                        <div class="more-link"><a href="#">اطلاعات بیشتر</a></div>
-                    </div>
-                 <img src="./assets/images/rings2-shop-lazy.jpg" data-src="./assets/images/rings2-shop.jpg" class="features-img lazy-img">
+                <div class="col col-3">
+
                 </div>
-                <div class="product">
-                    <div class="overlay-lazy-img">
-                        <div class="more-link"><a href="#">اطلاعات بیشتر</a></div>
-                    </div>
-                 <img src="./assets/images/bracelet2-shop-lazy.jpg" data-src="./assets/images/bracelet2-shop.jpg" class="features-img lazy-img">
-                </div>
-                </div>       
+                
+            </div>
                 </div>               
             </div>
         </div>
@@ -170,8 +118,9 @@
             const closeFilterIcon = document.querySelector('.close-icon-filter');
             const rangeSlider = document.getElementById('myRange');
             const orderby = document.querySelector('.orderby');
-            const product  = document.querySelector('.product');
-           
+            const productColOne  = document.querySelector('.col-1');
+            const productColTwo  = document.querySelector('.col-2');
+            const productColThree  = document.querySelector('.col-3');
             let products = [
                 {
                       id:1,
@@ -186,7 +135,7 @@
                 {
                     id:2,
                     src:'./assets/images/earring2-shop-lazy.jpg',
-                    dataSrc:'/assets/images/earring2-shop.jpg',
+                    dataSrc:'./assets/images/earring2--shop.jpg',
                     name:'گوشواره مروارید طلا زرد',
                     price:'۲۵۰۰۰۰۰۰',
                     popularity:5,
@@ -288,10 +237,13 @@
                 })
             })
              
-            // products.map(product=>{ product.innerHTML = `<div class="product"><div class="overlay-lazy-img"> <div class="more-link"><a href="#">اطلاعات بیشتر</a></div> </div><img src=${product.src} data-src=${product.dataSrc} class="features-img lazy-img"></div></div>`;
-             
-                
-            // })
+            
+          const item  = products.map(product=> `<div class="product"><img src=${product.src} data-src=${product.dataSrc} class="features-img lazy-img"></div><div class="overlay-lazy-img"> </div></div>`);
+            
+            console.log(item);
+     productColOne.innerHTML =  item[0]+item[1]+item[2];
+     productColTwo.innerHTML = item[3]+item[4]+item[5];
+     productColThree.innerHTML = item[6]+item[7]+item[8];
       // lazy loading images
   const imageTargets = document.querySelectorAll('img[data-src]');
 
