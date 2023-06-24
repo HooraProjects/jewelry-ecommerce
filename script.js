@@ -49,6 +49,9 @@ const header = ` <nav class="right-header">
 <a href="#" class="menu-item-left-header"
   ><i class="fa-solid fa-magnifying-glass"></i
 ></a>
+<a href="#" class="menu-item-left-header">
+            <i class="fa-solid fa-user"></i>
+          </a>
 <a href="#" class="menu-item-left-header"
   ><i class="fa-solid fa-cart-shopping"></i
 ></a>
