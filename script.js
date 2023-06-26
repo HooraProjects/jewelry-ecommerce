@@ -136,11 +136,7 @@ document.querySelectorAll('header').forEach(function(h){
                     overlay.style.display="none";
                 })
             })
-             
-            // products.map(product=>{ product.innerHTML = `<div class="product"><div class="overlay-lazy-img"> <div class="more-link"><a href="#">اطلاعات بیشتر</a></div> </div><img src=${product.src} data-src=${product.dataSrc} class="features-img lazy-img"></div></div>`;
-             
-                
-            // })
+           
       // lazy loading images
       
       
