@@ -97,7 +97,7 @@ body {
     list-style-type: none;
 }
 .container--home{
-    width:100%
+    width:100%;
 }
 .shop-top-sidebar .product-categories .cat-item{
  padding: 15px 30px;
@@ -547,6 +547,6 @@ footer{
     margin-top: 15%;
 }
 #contact-image{
-  height:450px
+  height:450px;
 }
 
