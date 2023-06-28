@@ -249,10 +249,11 @@
             
           const item  = products.map(product=> `<div class="product">
             <img src=${product.src} data-src=${product.dataSrc} class="features-img lazy-img">
+            <div class="overlay-product"></div>
             <p>${product.name}</p> 
             <p>${product.price}  تومان</p>
             </div>
-            </div>`);
+            `);
         
      productColOne.innerHTML =  item[0]+item[1]+item[2];
      productColTwo.innerHTML = item[3]+item[4]+item[5];
