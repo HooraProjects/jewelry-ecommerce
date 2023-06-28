@@ -1,10 +1,6 @@
 'use strict';
 
-const slider = document.querySelector('.slider');
-const slideImg = document.getElementById('slide');
-const btnRight = document.querySelector('#arrow-btn-right');
- const btnLeft = document.querySelector('#arrow-btn-left');
-const dotsContainer = document.getElementById('dots');
+
 const closeIcon = document.querySelectorAll('.close-icon');
 const filterSidebar = document.querySelector('.filter-sidebar');
 const filterIcon = document.querySelector('.fa-filter');
@@ -13,9 +9,14 @@ const rangeSlider = document.getElementById('myRange');
 const orderby = document.querySelector('.orderby');
 const product  = document.querySelector('.product');
 
-const menuIcon = document.querySelectorAll('.menu-icon');
+const menuIcon = document.querySelector('#menu-icon');
  const sideBar = document.querySelector('.right--header--menu');
 const overlay = document.querySelector('.overlay');
+const searchIcon = document.querySelector('.menu-item-left-header-1');
+searchIcon.addEventListener('click',function(){
+  document.querySelector('.search-input').style.display = "block";
+
+})
 
 
 const header = ` <nav class="right-header">
@@ -89,9 +90,9 @@ sideBar.style.display = "none";
 
 
 
-function openMenu(){
-  menuIcon.addEventListener('click',function(){
-    
+
+  menuIcon.addEventListener('click',function(e){
+  
    sideBar.style.display = "flex";
     overlay.style.display ="block";
     overlay.addEventListener('click',function(){
@@ -99,7 +100,9 @@ function openMenu(){
       overlay.style.display="none";
     })
   })
-}
+
+  
+
 
 
 

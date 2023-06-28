@@ -171,11 +171,14 @@ body {
     text-decoration: none;
     color: rgb(66, 66, 66);  
 }
-
+.right-header{
+    
+    height: 90px;
+}
 .arma--header{
     display: flex;
-    justify-content:space-between;
     align-items:center;
+    justify-content: space-between;
     width: 100%;
     height:90px;
     background-color: #ffffff;
@@ -238,10 +241,10 @@ li{
 .right--header--menu{
     list-style-type: none;
     flex-direction: column;
+    margin-top: 0;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     width:320px;
-    height: 100vh;
-    margin-top:0;
+    height: 100%;
     background-color: white;
     position: fixed;
     top: 0;
@@ -332,9 +335,19 @@ li{
     top:5%;
     right: 2%;
 }
-.menu-item-left-header{
+.menu-item-left-header,.menu-item-left-header-1{
     padding:0.75em 1em;
     
+}
+.search-input{
+    position: absolute;
+    width: 130px;
+    border-color: #0072B8;
+    height:30px;
+    left:9%;
+    outline: none;
+    border-radius: 10px;
+    transition: 0.3s ease;
 }
 #arrow-btn-right{   
    right:3%;

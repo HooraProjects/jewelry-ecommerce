@@ -38,9 +38,10 @@
         
         <img src="./assets/images/logo.png" id="logo--header" />
         <div class="left-header">
-          <a href="#" class="menu-item-left-header"
+          <a href="#" class="menu-item-left-header-1"
             ><i class="fa-solid fa-magnifying-glass"></i
           ></a>
+          <input type="text" class="search-input" style="display: none;">
           <a href="#" class="menu-item-left-header">
             <i class="fa-solid fa-user"></i>
           </a>
@@ -93,7 +94,12 @@ const dotsContainer = document.querySelector('.dots');
 const menuIcon = document.querySelector('.menu-icon');
 const sideBar = document.querySelector('.right--header--menu');
 const closeIcon = document.querySelectorAll('.close-icon');
-const overlay = document.querySelector('.overlay')
+const overlay = document.querySelector('.overlay');
+const searchIcon = document.querySelector('.menu-item-left-header-1');
+ searchIcon.addEventListener('click',function(){
+   document.querySelector('.search-input').style.display = "block";
+
+ })
 overlay.style.display="none"
       let i = 0;
       sideBar.style.display = "none";
