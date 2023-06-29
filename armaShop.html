@@ -19,24 +19,18 @@
                 <li><a href="./index.html" class="menu-item " id="menu-item-1">آرما</a></li>
                 <li><a href="#" class="menu-item active" id="menu-item-2">فروشگاه</a></li>
                 <li><a href="./armaAboutUs.html" class="menu-item" id="menu-item-3">درباره ما</a></li>
-                <li><a href="./armaContactUs.html" class="menu-item" id="menu-item-4">تماس با ما</a></li>         
-                    
+                <li><a href="./armaContactUs.html" class="menu-item" id="menu-item-4">تماس با ما</a></li>                    
             </ul>
         </nav>
             <img src="./assets/images/logo.png" id="logo--header">
-    
-        <div class="left-header">
-            
+        <div class="left-header">       
             <a href="#" class="menu-item-left-header-1"><i class="fa-solid fa-magnifying-glass"></i></a> 
             <input type="text" class="search-input" style="display: none;">
-            <a href="#" class="menu-item-left-header">
-                <i class="fa-solid fa-user"></i>
-              </a>
+            <a href="#" class="menu-item-left-header"><i class="fa-solid fa-user"></i> </a>
             <a href="#" class="menu-item-left-header"><i class="fa-solid fa-cart-shopping"></i></a>
         </div>    
         </header>
-        
-            <div class="shop-top-sidebar">
+         <div class="shop-top-sidebar">
                 <ul class="product-categories">
                     <li class="cat-item" data-id="1"><a href="#">آویز</a></li>
                     <li class="cat-item" data-id="2"><a href="#">انگشتر</a></li>
@@ -55,41 +49,28 @@
                     <option value="price-desc">مرتب سازی بر اساس گران ترین</option>
                     <option value="rating">مرتب سازی بر اساس امتیاز</option>
                 </select>
-            </div>
-           
+            </div>        
         </div>
         <div class="container--shop container">
             <div class="filter-sidebar">
                 <div class="filter-content">
                     <div class="filter-content-top">
                         <a class="close-icon-filter"><i class="fa-solid fa-xmark"></i></a>
-                <h4>فیلتر بر اساس قیمت</h4>
-               
+                <h4>فیلتر بر اساس قیمت</h4>    
                     </div>
                     <div class="price-label">
                         قیمت :۰ تومان  -  ۱۵۰۰۰۰۰۰۰۰   
-                  </div>
-                    
+                  </div>      
                     <input type="range" min="0" max="100" value="0" class="range-slider" id="myRange" step="1">
                     <button class="btn-filter">فیلتر</button>
-                </div>
-                
-            </div>
-            <div class="product-list">
-                <div class="col col-1">
-
-                </div>
-                <div class="col col-2">
-
-                </div>
-                <div class="col col-3">
-
-                </div>
-                
-            </div>
                 </div>               
             </div>
-        </div>
+            <div class="product-list">             
+                <div class="col col-1"></div>
+                <div class="col col-2"> </div>
+                <div class="col col-3"></div>
+            </div>
+        </div>                     
         <footer>
             <div class="wpb-wrapper">
                 <div class="links-footer">
@@ -97,18 +78,15 @@
                   <a href="#">تضمین برگشت / معاوضه کالا</a>
                   <a href="#">باشگاه مشتریان</a>
                   <a href="#">درباره ما / تماس با ما</a>
-                </div>
-                
+                </div>               
                 <div><small>تمامی حقوق مادی و معنوی این وبسایت متعلق به جواهری آرما می‌باشد</small></div>
-               </div>
-          
+               </div>         
                <div class="wpb-wrapper">
                 <div class="join-club-footer-title"><p>عضویت در خبرنامه</p></div>
                 <div class="join-club-footer">
                   <input type="email" placeholder="ایمیل شما">
                 <input type="submit" value="عضویت">
-                </div>
-                
+                </div>              
                </div>
         </footer>
         <script>
@@ -126,10 +104,9 @@
             const productColTwo  = document.querySelector('.col-2');
             const productColThree  = document.querySelector('.col-3');
             const searchIcon = document.querySelector('.menu-item-left-header-1');
- searchIcon.addEventListener('click',function(){
-   document.querySelector('.search-input').style.display = "block";
-
- })
+         searchIcon.addEventListener('click',function(){
+       document.querySelector('.search-input').style.display = "block";
+         })
             let products = [
                 {
                       id:1,
@@ -217,12 +194,12 @@
                
             ]
             rangeSlider.addEventListener('input',function(e){
-                console.log(e.target.value);
+               // console.log(e.target.value);
             })
             filterSidebar.style.display = "none";
             overlay.style.display="none"
-             sideBar.style.display = "none";   
-             filterIcon.addEventListener('click',function(){
+            sideBar.style.display = "none";   
+            filterIcon.addEventListener('click',function(){
                 filterSidebar.style.display = "flex";
              })  
              closeFilterIcon.addEventListener('click',function(){
@@ -230,40 +207,38 @@
              })     
             
             menuIcon.addEventListener('click',function(){
-                
                  sideBar.style.display = "flex";
                  overlay.style.display="block";    
                  overlay.addEventListener('click',function(){
-        sideBar.style.display = "none";
-        overlay.style.display="none";
-      })
-                       
+                 sideBar.style.display = "none";
+                overlay.style.display="none";
+      })                  
             })
             closeIcon.forEach(function(icon){
                 icon.addEventListener('click',function(){
                     sideBar.style.display = "none";
                     overlay.style.display="none";
                 })
-            })
-             
-            
+            })            
           const item  = products.map(product=> `<div class="product">
             <img src=${product.src} data-src=${product.dataSrc} class="features-img lazy-img">
-            <div class="overlay-product"></div>
+            <div class="overlay-product">
+                <i class="fa-regular fa-heart" class="overlay-icon" title="افزودن به علاقه مندی"></i>
+                <i class="fa-solid fa-magnifying-glass" class="overlay-icon"  title="مشاهده سریع"></i>
+                <i class="fa-solid fa-cart-shopping" class="overlay-icon" title="افزودن به سبد خرید"></i>
+                </div>
             <p>${product.name}</p> 
             <p>${product.price}  تومان</p>
             </div>
-            `);
-        
+            `);      
      productColOne.innerHTML =  item[0]+item[1]+item[2];
      productColTwo.innerHTML = item[3]+item[4]+item[5];
      productColThree.innerHTML = item[6]+item[7]+item[8];
       // lazy loading images
   const imageTargets = document.querySelectorAll('img[data-src]');
+  let imageOptions ={
 
-let imageOptions ={
-
-}
+            };
 let observer = new IntersectionObserver((entries,observer)=>{
     entries.forEach(entry=>{
         if(!entry.isIntersecting) return;
@@ -279,8 +254,7 @@ imageTargets.forEach((image)=>{
 })
 
 orderby.addEventListener('change',function(){
-    if(orderby.value ==='popularity'){
-        
+    if(orderby.value ==='popularity'){   
     }
     if(orderby.value ==='price'){
 
@@ -293,8 +267,6 @@ orderby.addEventListener('change',function(){
     }
 
 })
-
-
-            </script>
+ </script>
 </body>
 </html>

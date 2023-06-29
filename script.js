@@ -1,6 +1,5 @@
 'use strict';
 
-
 const closeIcon = document.querySelectorAll('.close-icon');
 const filterSidebar = document.querySelector('.filter-sidebar');
 const filterIcon = document.querySelector('.fa-filter');
@@ -84,15 +83,9 @@ width: 100%;">
 
 </div></div>`;
 sideBar.style.display = "none";
+overlay.style.display="none";
 
-  overlay.style.display="none"
-
-
-
-
-
-  menuIcon.addEventListener('click',function(e){
-  
+menuIcon.addEventListener('click',function(e){
    sideBar.style.display = "flex";
     overlay.style.display ="block";
     overlay.addEventListener('click',function(){
@@ -101,11 +94,6 @@ sideBar.style.display = "none";
     })
   })
 
-  
-
-
-
-
 closeIcon.forEach(function(icon){
   icon.addEventListener('click',function(){
       sideBar.style.display = "none";
@@ -113,26 +101,12 @@ closeIcon.forEach(function(icon){
   })
 })
 
-
-
-
-
-
-
-
 document.querySelectorAll('footer').forEach(function(f){
     f.innerHTML= footer;
 })
 document.querySelectorAll('header').forEach(function(h){
     h.innerHTML= header;
-})
-
- 
-              
-            
-        
-                       
-          
+})        
             closeIcon.forEach(function(icon){
                 icon.addEventListener('click',function(){
                     sideBar.style.display = "none";
@@ -141,11 +115,7 @@ document.querySelectorAll('header').forEach(function(h){
             })
            
       // lazy loading images
-      
-      
-     
-      
-      document.querySelectorAll('footer').forEach(function(f){
+          document.querySelectorAll('footer').forEach(function(f){
           f.innerHTML= footer;
       })
       document.querySelectorAll('header').forEach(function(h){
