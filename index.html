@@ -13,10 +13,10 @@
     <div class="overlay"></div>
       <header class="arma--header" role="banner">
         <nav class="right-header">
-          <a class="menu-icon"><i class="fa-solid fa-bars"></i></a>
+          <a class="menu-icon" onclick="openMenu()"><i class="fa-solid fa-bars"></i></a>
           <ul class="right--header--menu">
             <li>
-              <a class="close-icon"><i class="fa-solid fa-xmark"></i></a>
+              <a class="close-icon" onclick="closeMenu()"><i class="fa-solid fa-xmark"></i></a>
             </li>
             <li>
               <a href="#" class="menu-item active" id="menu-item-1">آرما</a>
@@ -55,8 +55,8 @@
     <div class="container--home container">
          <div class="slider" id="main--slider">
             <div ><img  class="slide" id="slide" src="./assets/images/ring-background-image.jpg" alt="تصویر بک گراند" ></div> 
-           <button class="arrow-btn-slider" id="arrow-btn-right"><i class="fa-solid fa-angle-right"></i></button> 
-           <button class="arrow-btn-slider" id="arrow-btn-left" ><i class="fa-solid fa-angle-left"></i></button> 
+           <button class="arrow-btn-slider" id="arrow-btn-right" onclick="nextImg()"><i class="fa-solid fa-angle-right"></i></button> 
+           <button class="arrow-btn-slider" id="arrow-btn-left" onclick="prevImg()"><i class="fa-solid fa-angle-left"></i></button> 
            <div class="dots" id="slider--dots"></div>
         </div>
         <div class="most-visited-products-container">
@@ -103,8 +103,6 @@ function nextImg(){
  setImg(i);
  activateDot(i);  
 }
-btnRight.addEventListener('click',nextImg);
-btnLeft.addEventListener('click',prevImg);
 
 const setImg = function(i){
   slideImg.src = images[i];
@@ -134,23 +132,20 @@ dotsContainer.addEventListener('click',function(e){
      const i = e.target.getAttribute('data-slide');
      setImg(i);
 })
-menuIcon.addEventListener('click',function(){
-  
+
+  function openMenu() {
   sideBar.style.display = "flex";
   overlay.style.display ="block";
   overlay.addEventListener('click',function(){
-    sideBar.style.display = "none";
-    overlay.style.display="none";
+  sideBar.style.display = "none";
+  overlay.style.display="none";
   })
-
-
-})
-closeIcon.forEach(function(icon){
-  icon.addEventListener('click',function(){
-      sideBar.style.display = "none";
-      overlay.style.display="none";
-  })
-})
+  }
+ 
+function closeMenu(){
+     sideBar.style.display = "none";
+      overlay.style.display="none"; 
+}
 
 
 const footer  = `<div class="footer" style="display: flex;
