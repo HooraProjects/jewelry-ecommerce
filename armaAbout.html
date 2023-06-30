@@ -6,28 +6,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="./assets//images/logo.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="style.css">
+   
     <title>درباره ما</title>
 </head>
 <body>
     <div class="overlay"></div>
     <header class="arma--header" role="banner">     
         <nav class="right-header">
-            <a id="menu-icon" ><i class="fa-solid fa-bars" ></i></a>
-            <ul class="right--header--menu"  >  
-                <li><a class="close-icon" ><i class="fa-solid fa-xmark" ></i></a></li>  
+            <a id="menu-icon" ><i class="fa-solid fa-bars"></i></a>
+            <ul class="right--header--menu" >  
+                <li><a class="close-icon" onclick="closeSideBar()"><i class="fa-solid fa-xmark" ></i></a></li>  
                 <li><a href="./index.html" class="menu-item " id="menu-item-1">آرما</a></li>
                 <li><a href="./armaShop.html" class="menu-item" id="menu-item-2">فروشگاه</a></li>
                 <li><a href="#" class="menu-item active" id="menu-item-3">درباره ما</a></li>
-                <li><a href="./armaContactUs.html" class="menu-item" id="menu-item-4">تماس با ما</a></li>        
-                    
-            </ul>
+                <li><a href="./armaContactUs.html" class="menu-item" id="menu-item-4">تماس با ما</a></li>            
+                </ul>
         </nav>
         <img src="./assets/images/logo.png" id="logo--header">
         <div class="left-header">
             
-            <a href="#" class="menu-item-left-header-1"><i class="fa-solid fa-magnifying-glass"></i></a> 
-            <input type="text" class="search-input" style="display: none;">
+            <div class="menu-item-left-header-1">
+                <a href="#">
+                 <input type="text"  class="fas fa-search" placeholder="&#xf002">
+                </a>
+              </div>
             <a href="#" class="menu-item-left-header"><i class="fa-solid fa-cart-shopping"></i></a>
         </div>    
         </header>
@@ -51,7 +54,7 @@
             <img  id="about-img" src="./assets/images/about-set.jpg">
         </div>
     </div>
-    <footer> </footer>
+    <footer></footer>
     <script src="./script.js"></script>
 </body>
 </html>

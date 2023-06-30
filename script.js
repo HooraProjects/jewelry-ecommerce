@@ -1,21 +1,11 @@
 'use strict';
 
 const closeIcon = document.querySelectorAll('.close-icon');
-const filterSidebar = document.querySelector('.filter-sidebar');
-const filterIcon = document.querySelector('.fa-filter');
-const closeFilterIcon = document.querySelector('.close-icon-filter');
-const rangeSlider = document.getElementById('myRange');
-const orderby = document.querySelector('.orderby');
-const product  = document.querySelector('.product');
-
 const menuIcon = document.querySelector('#menu-icon');
- const sideBar = document.querySelector('.right--header--menu');
+ const sideBar = document.querySelector('.right-header');
 const overlay = document.querySelector('.overlay');
-const searchIcon = document.querySelector('.menu-item-left-header-1');
-searchIcon.addEventListener('click',function(){
-  document.querySelector('.search-input').style.display = "block";
-
-})
+sideBar.style.display = "none";
+overlay.style.display="none";
 
 
 const header = ` <nav class="right-header">
@@ -56,6 +46,7 @@ const header = ` <nav class="right-header">
   ><i class="fa-solid fa-cart-shopping"></i
 ></a>
 </div>`;
+
 const footer  = `<div class="footer" style="display: flex;
 
 justify-content: space-around;
@@ -82,8 +73,7 @@ width: 100%;">
 </div>
 
 </div></div>`;
-sideBar.style.display = "none";
-overlay.style.display="none";
+
 
 menuIcon.addEventListener('click',function(e){
    sideBar.style.display = "flex";
@@ -94,12 +84,7 @@ menuIcon.addEventListener('click',function(e){
     })
   })
 
-closeIcon.forEach(function(icon){
-  icon.addEventListener('click',function(){
-      sideBar.style.display = "none";
-      overlay.style.display="none";
-  })
-})
+
 
 document.querySelectorAll('footer').forEach(function(f){
     f.innerHTML= footer;
@@ -107,51 +92,12 @@ document.querySelectorAll('footer').forEach(function(f){
 document.querySelectorAll('header').forEach(function(h){
     h.innerHTML= header;
 })        
-            closeIcon.forEach(function(icon){
-                icon.addEventListener('click',function(){
-                    sideBar.style.display = "none";
-                    overlay.style.display="none";
-                })
-            })
-           
-      // lazy loading images
-          document.querySelectorAll('footer').forEach(function(f){
-          f.innerHTML= footer;
-      })
-      document.querySelectorAll('header').forEach(function(h){
-          h.innerHTML= header;
-      })
-     
-       
-      
+            
         
-      
-  
-        
-      
-      
-      
-         
-             
-      
-              
-      
-       
-      
-          
-                 
-      
-      document.querySelectorAll('.close-icon').forEach(function(icon){
-          icon.addEventListener('click',function(){
-              document.querySelectorAll('.right--header--menu').forEach(function(sidebar){
-             sidebar.style.display = "none";
-             document.querySelectorAll('.overlay').forEach(function(over){
-              over.style.display ="none";
-             })
-              })
-          })
-      })
-
+function closeSidebar(){
+  sideBar.style.display = "none";
+  overlay.style.display="none";
+}
 
 
 

@@ -10,6 +10,21 @@ body {
     height: 100%;
     font-family:Shabnam;
 }
+.fa-search{
+    border-color: #0072B8;
+    width: 160px;
+    height:30px;
+    outline: none;
+    border-radius: 10px;
+   
+}
+.fa-search::placeholder{
+    color: #0072B8;
+    font-size: 15px;
+    padding: 2%;
+}
+
+
 .fa-phone-flip, .fa-whatsapp, .fa-envelope, .fa-map-location{
     cursor: pointer;
 }
@@ -159,6 +174,19 @@ body {
 .right-header{   
     height: 90px;
 }
+.right--header--menu{
+    list-style-type: none;
+    flex-direction: column;
+    margin-top: 0;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    width:320px;
+    height: 100%;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 99;
+}
 .arma--header{
     display: flex;
     align-items:center;
@@ -167,6 +195,7 @@ body {
     height:90px;
     background-color: #ffffff;   
 }
+
 .fa-magnifying-glass,.fa-cart-shopping,.fa-user,.fa-heart{
     cursor: pointer;
     color: #2e7297;
@@ -233,19 +262,7 @@ li{
 .fa-xmark{
     color:#123440;
 }
-.right--header--menu{
-    list-style-type: none;
-    flex-direction: column;
-    margin-top: 0;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    width:320px;
-    height: 100%;
-    background-color: white;
-    position: fixed;
-    top: 0;
-    right: 0;
-    z-index: 99;
-}
+
 .overlay {
     position: fixed;
     top: 0;
@@ -260,7 +277,6 @@ li{
     text-decoration: none;
     padding:0.25em;
     cursor:pointer;
-    border-radius: 0.5em;
     color: rgb(66, 66, 66);  
     border:1px solid transparent;
     transition:  border .3s ease-in-out;
@@ -272,8 +288,11 @@ li{
 .active-item{
     opacity:0.5;
 }
-.menu-item.active,.menu-item:hover{
-   border:1px solid black   
+.menu-item:hover{
+  border-bottom: 1px solid black;
+}
+.menu-item{
+   padding: 10px 15px;
 }
 #logo--header{  
     height:90px;
@@ -322,18 +341,9 @@ li{
     right: 2%;
 }
 .menu-item-left-header,.menu-item-left-header-1{
-    padding:0.75em 1em;    
+    padding:0.75em 1.25em;    
 }
-.search-input{
-    position: absolute;
-    width: 130px;
-    border-color: #0072B8;
-    height:30px;
-    left:9%;
-    outline: none;
-    border-radius: 10px;
-    transition: 0.3s ease;
-}
+
 #arrow-btn-right{   
    right:3%;
     top:45%;

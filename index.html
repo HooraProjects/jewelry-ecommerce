@@ -25,7 +25,7 @@
               <a href="./armaShop.html" class="menu-item" id="menu-item-2">فروشگاه</a>
             </li>
             <li>
-              <a href="./armaAboutUs.html" class="menu-item" id="menu-item-3">درباره ما</a>
+              <a href="./armaAbout.html" class="menu-item" id="menu-item-3">درباره ما</a>
             </li>
             <li>
               <a href="./armaContactUs.html" class="menu-item" id="menu-item-4">تماس با ما</a>
@@ -35,8 +35,14 @@
         
         <img src="./assets/images/logo.png" id="logo--header"/>
         <div class="left-header">
-          <a href="#" class="menu-item-left-header-1"><i class="fa-solid fa-magnifying-glass"></i></a>
-          <input type="text" class="search-input" style="display: none;">
+          <div class="menu-item-left-header-1">
+            <a href="#">
+             <input type="text"  class="fas fa-search" placeholder="&#xf002">
+            </a>
+
+          </div>
+         
+          
           <a href="#" class="menu-item-left-header">
             <i class="fa-solid fa-user"></i>
           </a>
@@ -80,11 +86,7 @@ const menuIcon = document.querySelector('.menu-icon');
 const sideBar = document.querySelector('.right--header--menu');
 const closeIcon = document.querySelectorAll('.close-icon');
 const overlay = document.querySelector('.overlay');
-const searchIcon = document.querySelector('.menu-item-left-header-1');
- searchIcon.addEventListener('click',function(){
-   document.querySelector('.search-input').style.display = "block";
 
- })
 overlay.style.display="none"
       let i = 0;
       sideBar.style.display = "none";
