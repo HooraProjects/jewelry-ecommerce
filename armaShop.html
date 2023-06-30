@@ -13,9 +13,9 @@
     <div class="overlay"></div>
     <header class="arma--header" role="banner">     
         <nav class="right-header">
-            <a class="menu-icon"><i class="fa-solid fa-bars"></i></a>
+            <a class="menu-icon" onclick="openMenu()"><i class="fa-solid fa-bars"></i></a>
             <ul class="right--header--menu" >   
-                <li><a class="close-icon" ><i class="fa-solid fa-xmark" ></i></a></li>  
+                <li><a class="close-icon" onclick="closeMenu()"><i class="fa-solid fa-xmark" ></i></a></li>  
                 <li><a href="./index.html" class="menu-item " id="menu-item-1">آرما</a></li>
                 <li><a href="#" class="menu-item active" id="menu-item-2">فروشگاه</a></li>
                 <li><a href="./armaAbout.html" class="menu-item" id="menu-item-3">درباره ما</a></li>
@@ -45,7 +45,7 @@
                 </ul>
             </div>
            <div class="result">
-            <i class="fa-solid fa-filter"></i>
+            <i class="fa-solid fa-filter" onclick="showFilterBar()"></i>
             <div class="select">
                 <select name="orderby" class="orderby">
                     <option value="popularity">مرتب سازی بر اساس محبوب ترین</option>
@@ -59,7 +59,7 @@
             <div class="filter-sidebar">
                 <div class="filter-content">
                     <div class="filter-content-top">
-                        <a class="close-icon-filter"><i class="fa-solid fa-xmark"></i></a>
+                        <a class="close-icon-filter" onclick="closeFilterBar()"><i class="fa-solid fa-xmark"></i></a>
                 <h4>فیلتر بر اساس قیمت</h4>    
                     </div>
                     <div class="price-label">
@@ -199,27 +199,29 @@
             filterSidebar.style.display = "none";
             overlay.style.display="none"
             sideBar.style.display = "none";   
-            filterIcon.addEventListener('click',function(){
+            function showFilterBar(){
                 filterSidebar.style.display = "flex";
-             })  
-             closeFilterIcon.addEventListener('click',function(){
+            }
+             
+             function closeFilterBar(){
                 filterSidebar.style.display="none";
-             })     
+             }
+        
             
-            menuIcon.addEventListener('click',function(){
+           function openMenu(){
                  sideBar.style.display = "flex";
                  overlay.style.display="block";    
                  overlay.addEventListener('click',function(){
                  sideBar.style.display = "none";
                 overlay.style.display="none";
       })                  
-            })
-            closeIcon.forEach(function(icon){
+            }
+            function closeMenu(){
                 icon.addEventListener('click',function(){
                     sideBar.style.display = "none";
                     overlay.style.display="none";
                 })
-            })            
+            }           
           const item  = products.map(product=> `<div class="product">
             <img src=${product.src} data-src=${product.dataSrc} class="features-img lazy-img">
             <div class="overlay-product">

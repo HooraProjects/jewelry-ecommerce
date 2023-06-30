@@ -1,13 +1,12 @@
 'use strict';
 
-const closeIcon = document.querySelectorAll('.close-icon');
-const menuIcon = document.querySelector('#menu-icon');
- const sideBar = document.querySelector('.right-header');
-const overlay = document.querySelector('.overlay');
+
+const sideBar = document.querySelector('.right--header--menu');
 sideBar.style.display = "none";
+
+
+const overlay = document.querySelector('.overlay');
 overlay.style.display="none";
-
-
 const header = ` <nav class="right-header">
 <a class="menu-icon"><i class="fa-solid fa-bars"></i></a>
 <ul class="right--header--menu">
@@ -73,6 +72,13 @@ width: 100%;">
 </div>
 
 </div></div>`;
+document.getElementsByTagName('header').innerHTML= header;
+document.getElementsByTagName('footer').innerHTML= footer;
+
+const menuIcon = document.querySelector('#menu-icon');
+const closeIcon = document.querySelector('.close-icon');
+
+
 
 
 menuIcon.addEventListener('click',function(e){
@@ -82,19 +88,9 @@ menuIcon.addEventListener('click',function(e){
       sideBar.style.display = "none";
       overlay.style.display="none";
     })
-  })
-
-
-
-document.querySelectorAll('footer').forEach(function(f){
-    f.innerHTML= footer;
-})
-document.querySelectorAll('header').forEach(function(h){
-    h.innerHTML= header;
-})        
-            
-        
-function closeSidebar(){
+  })      
+                   
+function closeSideBar(){
   sideBar.style.display = "none";
   overlay.style.display="none";
 }
