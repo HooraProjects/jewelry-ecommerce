@@ -45,7 +45,7 @@ const header = ` <nav class="right-header">
   ><i class="fa-solid fa-cart-shopping"></i
 ></a>
 </div>`;
-
+document.getElementsByTagName('header').innerHTML= header;
 const footer  = `<div class="footer" style="display: flex;
 
 justify-content: space-around;
@@ -72,11 +72,11 @@ width: 100%;">
 </div>
 
 </div></div>`;
-document.getElementsByTagName('header').innerHTML= header;
-document.getElementsByTagName('footer').innerHTML= footer;
 
-const menuIcon = document.querySelector('#menu-icon');
-const closeIcon = document.querySelector('.close-icon');
+document.getElementById('footer').innerHTML= footer;
+
+const menuIcon = document.getElementById('menu-icon');
+const closeIcon = document.getElementById('close-icon');
 
 
 
