@@ -14,49 +14,51 @@
     
     <header class="arma--header" role="banner">
       <nav class="right-header">
-        <a class="menu-icon" onclick="openMenu()"><i class="fa-solid fa-bars"></i></a>
-        <ul class="right--header--menu">
-          <li>
-            <a id="close-icon" onclick="closeMenu()"><i class="fa-solid fa-xmark"></i></a>
-          </li>
-          <li>
-            <a href="#" class="menu-item active" id="menu-item-1">آرما</a>
-          </li>
-          <li>
-            <a href="./armaShop.html" class="menu-item" id="menu-item-2">فروشگاه</a>
-          </li>
-          <li>
-            <a href="./armaAbout.html" class="menu-item" id="menu-item-3">درباره ما</a>
-          </li>
-          <li>
-            <a href="./armaContactUs.html" class="menu-item" id="menu-item-4">تماس با ما</a>
-          </li>
-        </ul>
-      </nav>
-      
-      <img src="./assets/images/logo.webp" id="logo--header"/>
-      <div class="left-header">
-        <div class="menu-item-left-header-1">
-          <a href="#">
-           <input type="text"  class="fas fa-search" placeholder="&#xf002">
-          </a>
-
-        </div>
-       
-        
-        <a href="#" class="menu-item-left-header">
-          <i class="fa-solid fa-user"></i>
+     <a id="menu-icon" onclick="openMenu()"><i class="fa-solid fa-bars"></i></a>
+     <ul class="right--header--menu">
+       <li>
+         <a id="close-icon" onclick="closeMenu()"><i class="fa-solid fa-xmark"></i></a>
+       </li>
+       <li><a href="#" class="menu-item active" id="menu-item-1">آرما</a></li>
+       <li>
+         <a href="./armaShop.html" class="menu-item" id="menu-item-2">فروشگاه</a>
+       </li>
+       <li>
+         <a href="./armaAboutUs.html" class="menu-item" id="menu-item-3"
+           >درباره ما</a
+         >
+       </li>
+       <li>
+         <a href="./armaContactUs.html" class="menu-item" id="menu-item-4"
+           >تماس با ما</a
+         >
+       </li>
+     </ul>
+     </nav>
+     
+     <img src="./assets/images/logo.webp" id="logo--header" />
+     <div class="left-header">
+      <div class="menu-item-left-header-1">
+        <a href="#">
+         <input type="text"  class="fas fa-search" placeholder="&#xf002">
         </a>
-         <a href="#" class="menu-item-left-header"><i class="fa-solid fa-cart-shopping"></i ></a>
+
       </div>
-    </header>
+     <a href="#" class="menu-item-left-header">
+                 <i class="fa-solid fa-user"></i>
+               </a>
+     <a href="#" class="menu-item-left-header"
+       ><i class="fa-solid fa-cart-shopping"></i
+     ></a>
+     </div>
+     </header>
 
   
     
       
     <div class="container--home container">
          <div class="slider" id="main--slider">
-            <div ><img  class="slide" id="slide" src="./assets/images/ring-background-image.jpg" alt="تصویر بک گراند" ></div> 
+            <div ><img  class="slide" id="slide" src="./assets/images/ring-background-image.webp" alt="تصویر بک گراند" ></div> 
            <button class="arrow-btn-slider" id="arrow-btn-right" onclick="nextImg()"><i class="fa-solid fa-angle-right"></i></button> 
            <button class="arrow-btn-slider" id="arrow-btn-left" onclick="prevImg()"><i class="fa-solid fa-angle-left"></i></button> 
            <div class="dots" id="slider--dots"></div>
@@ -66,10 +68,10 @@
             <h3>محبوب ترین ها</h3>
           </div>
           <div class="most-visited-products">
-            <a class="most-visited-item"><img class="img-most-visited"src ="./assets/images/bracelet1-shop.jpg"></a>
-            <a class="most-visited-item"><img  class="img-most-visited" src="./assets/images/bracelet2-shop.jpg"></a>
-            <a class="most-visited-item"><img class="img-most-visited" src="./assets/images/ring1-shop.jpg"></a>
-            <a class="most-visited-item"><img class="img-most-visited" src="./assets/images/rings2-shop.jpg"></a>
+            <a class="most-visited-item"><img class="img-most-visited"src ="./assets/images/bracelet1-shop.webp"></a>
+            <a class="most-visited-item"><img  class="img-most-visited" src="./assets/images/bracelet2-shop.webp"></a>
+            <a class="most-visited-item"><img class="img-most-visited" src="./assets/images/ring1-shop.webp"></a>
+            <a class="most-visited-item"><img class="img-most-visited" src="./assets/images/rings2-shop.webp"></a>
           </div>
         </div>
     </div>
@@ -84,7 +86,7 @@ const slideImg = document.getElementById('slide');
 const btnRight = document.querySelector('#arrow-btn-right');
 const btnLeft = document.querySelector('#arrow-btn-left');
 const dotsContainer = document.querySelector('.dots');
-const menuIcon = document.querySelector('.menu-icon');
+const menuIcon = document.querySelector('#menu-icon');
 const sideBar = document.querySelector('.right--header--menu');
 const closeIcon = document.querySelector('#close-icon');
 const overlay = document.querySelector('.overlay');
@@ -92,7 +94,7 @@ const overlay = document.querySelector('.overlay');
 overlay.style.display="none"
       let i = 0;
       sideBar.style.display = "none";
-const images =['./assets/images/ring-background-image.jpg','./assets/images/earring-background-image.jpg','./assets/images/ring3-background-image.jpg'];
+const images =['./assets/images/ring-background-image.webp','./assets/images/earring-background-image.webp','./assets/images/ring3-background-image.webp'];
 function prevImg(){ 
   if( i <= 0)  i=images.length;
   i--;

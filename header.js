@@ -1,5 +1,5 @@
 'use strict';
-const header = `<header class="arma--header" role="banner">
+export const header = `<header class="arma--header" role="banner">
  <nav class="right-header">
 <a class="menu-icon"><i class="fa-solid fa-bars"></i></a>
 <ul class="right--header--menu">
