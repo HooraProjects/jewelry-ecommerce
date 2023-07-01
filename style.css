@@ -132,7 +132,7 @@ body {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    padding: 2%;
+    padding:10px 110px;
 }
 .orderby option {
     width: 240px;
@@ -246,7 +246,8 @@ li{
     width: 350px;
     height: 350px;
 }
-.close-icon,.close-icon-filter{
+
+#close-icon,.close-icon-filter{
     position:absolute;
     right:88%;
  
@@ -506,7 +507,7 @@ li{
     text-decoration: none;
 }
 
-footer{
+#footer{
     display: flex;
 
     justify-content: space-around;

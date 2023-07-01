@@ -15,7 +15,7 @@
         <nav class="right-header">
             <a class="menu-icon" onclick="openMenu()"><i class="fa-solid fa-bars"></i></a>
             <ul class="right--header--menu" >   
-                <li><a class="close-icon" onclick="closeMenu()"><i class="fa-solid fa-xmark" ></i></a></li>  
+                <li><a id="close-icon" onclick="closeMenu()"><i class="fa-solid fa-xmark" ></i></a></li>  
                 <li><a href="./index.html" class="menu-item " id="menu-item-1">آرما</a></li>
                 <li><a href="#" class="menu-item active" id="menu-item-2">فروشگاه</a></li>
                 <li><a href="./armaAbout.html" class="menu-item" id="menu-item-3">درباره ما</a></li>
@@ -75,7 +75,7 @@
                 <div class="col col-3"></div>
             </div>
         </div>                     
-        <footer>
+        <footer id="footer">
             <div class="wpb-wrapper">
                 <div class="links-footer">
                   <a href="#">جواهرات آرما</a>
@@ -97,7 +97,7 @@
         'use strict';
             const menuIcon = document.querySelector('.menu-icon');
             const sideBar = document.querySelector('.right--header--menu');
-            const closeIcon = document.querySelectorAll('.close-icon');
+            const closeIcon = document.querySelector('#close-icon');
             const overlay = document.querySelector('.overlay');
             const filterSidebar = document.querySelector('.filter-sidebar');
             const filterIcon = document.querySelector('.fa-filter');
@@ -217,10 +217,10 @@
       })                  
             }
             function closeMenu(){
-                icon.addEventListener('click',function(){
+               
                     sideBar.style.display = "none";
                     overlay.style.display="none";
-                })
+                
             }           
           const item  = products.map(product=> `<div class="product">
             <img src=${product.src} data-src=${product.dataSrc} class="features-img lazy-img">

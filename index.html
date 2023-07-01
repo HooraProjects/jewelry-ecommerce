@@ -11,44 +11,46 @@
 </head>
 <body>
     <div class="overlay"></div>
-      <header class="arma--header" role="banner">
-        <nav class="right-header">
-          <a class="menu-icon" onclick="openMenu()"><i class="fa-solid fa-bars"></i></a>
-          <ul class="right--header--menu">
-            <li>
-              <a class="close-icon" onclick="closeMenu()"><i class="fa-solid fa-xmark"></i></a>
-            </li>
-            <li>
-              <a href="#" class="menu-item active" id="menu-item-1">آرما</a>
-            </li>
-            <li>
-              <a href="./armaShop.html" class="menu-item" id="menu-item-2">فروشگاه</a>
-            </li>
-            <li>
-              <a href="./armaAbout.html" class="menu-item" id="menu-item-3">درباره ما</a>
-            </li>
-            <li>
-              <a href="./armaContactUs.html" class="menu-item" id="menu-item-4">تماس با ما</a>
-            </li>
-          </ul>
-        </nav>
-        
-        <img src="./assets/images/logo.png" id="logo--header"/>
-        <div class="left-header">
-          <div class="menu-item-left-header-1">
-            <a href="#">
-             <input type="text"  class="fas fa-search" placeholder="&#xf002">
-            </a>
-
-          </div>
-         
-          
-          <a href="#" class="menu-item-left-header">
-            <i class="fa-solid fa-user"></i>
+    
+    <header class="arma--header" role="banner">
+      <nav class="right-header">
+        <a class="menu-icon" onclick="openMenu()"><i class="fa-solid fa-bars"></i></a>
+        <ul class="right--header--menu">
+          <li>
+            <a id="close-icon" onclick="closeMenu()"><i class="fa-solid fa-xmark"></i></a>
+          </li>
+          <li>
+            <a href="#" class="menu-item active" id="menu-item-1">آرما</a>
+          </li>
+          <li>
+            <a href="./armaShop.html" class="menu-item" id="menu-item-2">فروشگاه</a>
+          </li>
+          <li>
+            <a href="./armaAbout.html" class="menu-item" id="menu-item-3">درباره ما</a>
+          </li>
+          <li>
+            <a href="./armaContactUs.html" class="menu-item" id="menu-item-4">تماس با ما</a>
+          </li>
+        </ul>
+      </nav>
+      
+      <img src="./assets/images/logo.png" id="logo--header"/>
+      <div class="left-header">
+        <div class="menu-item-left-header-1">
+          <a href="#">
+           <input type="text"  class="fas fa-search" placeholder="&#xf002">
           </a>
-           <a href="#" class="menu-item-left-header"><i class="fa-solid fa-cart-shopping"></i ></a>
+
         </div>
-      </header>
+       
+        
+        <a href="#" class="menu-item-left-header">
+          <i class="fa-solid fa-user"></i>
+        </a>
+         <a href="#" class="menu-item-left-header"><i class="fa-solid fa-cart-shopping"></i ></a>
+      </div>
+    </header>
+
   
     
       
@@ -73,8 +75,8 @@
     </div>
     <footer id="footer">
     </footer>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/gsap.min.js">
-    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/gsap.min.js"></script>
+   
     <script >
       'use strict';
 const slider = document.querySelector('.slider');
@@ -84,7 +86,7 @@ const btnLeft = document.querySelector('#arrow-btn-left');
 const dotsContainer = document.querySelector('.dots');
 const menuIcon = document.querySelector('.menu-icon');
 const sideBar = document.querySelector('.right--header--menu');
-const closeIcon = document.querySelectorAll('.close-icon');
+const closeIcon = document.querySelector('#close-icon');
 const overlay = document.querySelector('.overlay');
 
 overlay.style.display="none"
@@ -148,12 +150,7 @@ function closeMenu(){
 }
 
 
-const footer  = `<div class="footer" style="display: flex;
-
-justify-content: space-around;
-background-color: #F6F6F8;
-height: 150px;
-width: 100%;">
+const footer  = `<footer id="footer">
 
 <div class="wpb-wrapper">
 <div class="links-footer">
@@ -173,7 +170,7 @@ width: 100%;">
 <input type="submit" value="عضویت" class="btn-submit-footer" >
 </div>
 
-</div></div>`;
+</div></footer>`;
 document.getElementById('footer').innerHTML = footer;
 
 
