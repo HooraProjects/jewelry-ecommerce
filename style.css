@@ -187,13 +187,14 @@ body {
     right: 0;
     z-index: 99;
 }
-.arma--header{
+#arma--header{
     display: flex;
     align-items:center;
-    justify-content: space-between;
+    justify-content:space-between;
     width: 100%;
     height:90px;
-    background-color: #ffffff;   
+    background-color: #ffffff;  
+    font-family: Shabnam; 
 }
 
 .fa-magnifying-glass,.fa-cart-shopping,.fa-user,.fa-heart{
@@ -300,6 +301,7 @@ li{
 }
 #logo--header{  
     height:90px;
+  
 }
 .slider{
   min-width:100%;
@@ -345,7 +347,7 @@ li{
     right: 2%;
 }
 .menu-item-left-header,.menu-item-left-header-1{
-    padding:0.75em 1.25em;    
+    padding:1.2em 1.5em;    
 }
 
 #arrow-btn-right{   

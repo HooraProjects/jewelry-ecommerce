@@ -4,58 +4,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="./assets/images/logoIcon.webp">
+    <link rel="icon" type="image/x-icon" href="./assets/images/logoIcon.webp">  
+   
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="./header.js" async></script>
     <link rel="stylesheet" href="./style.css">
+   
     <title>جواهرات آرما</title>
 </head>
 <body>
-    <div class="overlay"></div>
-    
-    <header class="arma--header" role="banner">
-      <nav class="right-header">
-     <a id="menu-icon" onclick="openMenu()"><i class="fa-solid fa-bars"></i></a>
-     <ul class="right--header--menu">
-       <li>
-         <a id="close-icon" onclick="closeMenu()"><i class="fa-solid fa-xmark"></i></a>
-       </li>
-       <li><a href="#" class="menu-item active" id="menu-item-1">آرما</a></li>
-       <li>
-         <a href="./armaShop.html" class="menu-item" id="menu-item-2">فروشگاه</a>
-       </li>
-       <li>
-         <a href="./armaAboutUs.html" class="menu-item" id="menu-item-3"
-           >درباره ما</a
-         >
-       </li>
-       <li>
-         <a href="./armaContactUs.html" class="menu-item" id="menu-item-4"
-           >تماس با ما</a
-         >
-       </li>
-     </ul>
-     </nav>
-     
-     <img src="./assets/images/logo.webp" id="logo--header" />
-     <div class="left-header">
-      <div class="menu-item-left-header-1">
-        <a href="#">
-         <input type="text"  class="fas fa-search" placeholder="&#xf002">
-        </a>
-
-      </div>
-     <a href="#" class="menu-item-left-header">
-                 <i class="fa-solid fa-user"></i>
-               </a>
-     <a href="#" class="menu-item-left-header"
-       ><i class="fa-solid fa-cart-shopping"></i
-     ></a>
-     </div>
-     </header>
-
-  
-    
-      
+    <div class="overlay"></div>  
+    <header id="arma--header" role="banner">    
+     </header>        
     <div class="container--home container">
          <div class="slider" id="main--slider">
             <div ><img  class="slide" id="slide" src="./assets/images/ring-background-image.webp" alt="تصویر بک گراند" ></div> 
@@ -75,6 +35,7 @@
           </div>
         </div>
     </div>
+    <script src="./footer.js" async></script>
     <footer id="footer">
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/gsap.min.js"></script>
@@ -152,28 +113,7 @@ function closeMenu(){
 }
 
 
-const footer  = `<footer id="footer">
 
-<div class="wpb-wrapper">
-<div class="links-footer">
-<a href="#" class="links-footer-item">جواهرات آرما</a>
-<a href="#" class="links-footer-item">تضمین برگشت / معاوضه کالا</a>
-<a href="#" class="links-footer-item">باشگاه مشتریان</a>
-<a href="#" class="links-footer-item">درباره ما / تماس با ما</a>
-</div>
-
-<div><small>تمامی حقوق مادی و معنوی این وبسایت متعلق به جواهری آرما می‌باشد</small></div>
-</div>
-
-<div class="wpb-wrapper">
-<div class="join-club-footer-title"><p>عضویت در خبرنامه</p></div>
-<div class="join-club-footer">
-<input type="email" placeholder="ایمیل شما">
-<input type="submit" value="عضویت" class="btn-submit-footer" >
-</div>
-
-</div></footer>`;
-document.getElementById('footer').innerHTML = footer;
 
 
 gsap.from(".img-most-visited", {duration: 1, scale: 1.2});
