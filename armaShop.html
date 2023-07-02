@@ -7,6 +7,7 @@
     <link rel="icon" type="image/x-icon" href="./assets/images/logoIcon.webp">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="./header.js" async></script>
+    <script src="./script.js" async></script>
     <link rel="stylesheet" href="./style.css">
     <title>فروشگاه</title>
 </head>
@@ -60,10 +61,6 @@
         </footer>
         <script>
         'use strict';
-            const menuIcon = document.querySelector('.menu-icon');
-            const sideBar = document.querySelector('.right--header--menu');
-            const closeIcon = document.querySelector('#close-icon');
-            const overlay = document.querySelector('.overlay');
             const filterSidebar = document.querySelector('.filter-sidebar');
             const filterIcon = document.querySelector('.fa-filter');
             const closeFilterIcon = document.querySelector('.close-icon-filter');
@@ -172,21 +169,7 @@
                 filterSidebar.style.display="none";
              }
         
-            
-           function openMenu(){
-                 sideBar.style.display = "flex";
-                 overlay.style.display="block";    
-                 overlay.addEventListener('click',function(){
-                 sideBar.style.display = "none";
-                overlay.style.display="none";
-      })                  
-            }
-            function closeMenu(){
-               
-                    sideBar.style.display = "none";
-                    overlay.style.display="none";
-                
-            }           
+                     
           const item  = products.map(product=> `<div class="product">
             <img src=${product.src} data-src=${product.dataSrc} class="features-img lazy-img">
             <div class="overlay-product">

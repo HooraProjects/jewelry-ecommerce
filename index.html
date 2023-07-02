@@ -8,6 +8,7 @@
    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="./header.js" async></script>
+    
     <link rel="stylesheet" href="./style.css">
    
     <title>جواهرات آرما</title>
@@ -21,7 +22,8 @@
             <div ><img  class="slide" id="slide" src="./assets/images/ring-background-image.webp" alt="تصویر بک گراند" ></div> 
            <button class="arrow-btn-slider" id="arrow-btn-right" onclick="nextImg()"><i class="fa-solid fa-angle-right"></i></button> 
            <button class="arrow-btn-slider" id="arrow-btn-left" onclick="prevImg()"><i class="fa-solid fa-angle-left"></i></button> 
-           <div class="dots" id="slider--dots"></div>
+           <div class="dots" ></div>
+
         </div>
         <div class="most-visited-products-container">
           <div class="most-visited-title">
@@ -35,90 +37,94 @@
           </div>
         </div>
     </div>
+    
     <script src="./footer.js" async></script>
+
     <footer id="footer">
     </footer>
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/gsap.min.js"></script>
-   
-    <script >
-      'use strict';
-const slider = document.querySelector('.slider');
-const slideImg = document.getElementById('slide');
-const btnRight = document.querySelector('#arrow-btn-right');
-const btnLeft = document.querySelector('#arrow-btn-left');
-const dotsContainer = document.querySelector('.dots');
-const menuIcon = document.querySelector('#menu-icon');
-const sideBar = document.querySelector('.right--header--menu');
-const closeIcon = document.querySelector('#close-icon');
-const overlay = document.querySelector('.overlay');
-
-overlay.style.display="none"
-      let i = 0;
-      sideBar.style.display = "none";
-const images =['./assets/images/ring-background-image.webp','./assets/images/earring-background-image.webp','./assets/images/ring3-background-image.webp'];
-function prevImg(){ 
-  if( i <= 0)  i=images.length;
-  i--;
-  setImg(i);
-  activateDot(i);     
-}
-function nextImg(){
-  if(i >= images.length-1) i = -1;
-  i++;  
- setImg(i);
- activateDot(i);  
-}
-
-const setImg = function(i){
-  slideImg.src = images[i];
-  activateDot(i);
-}
-const createDots = function(){
-  images.forEach(function(s,i){
-      dotsContainer.insertAdjacentHTML('beforeend',`<div class="dot" data-slide="${i}"></div>`);
-  })
-}
-const activateDot = function(i){
-  document.querySelectorAll(`.dot`).forEach(function(dot){
-      dot.classList.remove('dot--active');
-      
-  })
-  document.querySelector(`.dot[data-slide="${i}"]`).classList.add('dot--active');
-  
-}
-createDots();
-activateDot(0);
-document.addEventListener('keydown',function(e){
-  (e.key === 'ArrowLeft') && prevImg();
-  (e.key === 'ArrowRight') && nextImg();
-})
-dotsContainer.addEventListener('click',function(e){
-  e.target.classList.add('dot--active');      
-     const i = e.target.getAttribute('data-slide');
+    <script>
+      'use strict'
+    const slider = document.querySelector('.slider');
+    const slideImg = document.getElementById('slide');
+    const btnRight = document.querySelector('#arrow-btn-right');
+    const btnLeft = document.querySelector('#arrow-btn-left');
+    const dotsContainer = document.querySelector('.dots');
+    const menuIcon = document.querySelector('#menu-icon');
+    const sideBar = document.querySelector('.right--header--menu');
+    const closeIcon = document.querySelector('#close-icon');
+    const overlay = document.querySelector('.overlay');
+    
+    overlay.style.display="none"
+          let i = 0;
+          sideBar.style.display = "none";
+    const images =['./assets/images/ring-background-image.webp','./assets/images/earring-background-image.webp','./assets/images/ring3-background-image.webp'];
+    function prevImg(){ 
+      if( i <= 0)  i=images.length;
+      i--;
+      setImg(i);
+      activateDot(i);     
+    }
+    function nextImg(){
+      if(i >= images.length-1) i = -1;
+      i++;  
      setImg(i);
-})
-
-  function openMenu() {
-  sideBar.style.display = "flex";
-  overlay.style.display ="block";
-  overlay.addEventListener('click',function(){
-  sideBar.style.display = "none";
-  overlay.style.display="none";
-  })
-  }
- 
-function closeMenu(){
-     sideBar.style.display = "none";
-      overlay.style.display="none"; 
-}
-
-
-
-
-
-gsap.from(".img-most-visited", {duration: 1, scale: 1.2});
-gsap.from(".img-most-visited", {duration: 1, x: 50});
-gsap.from(".img-most-visited", {duration: 1, opacity: 0.3});
-</script>
+     activateDot(i);  
+    }
+    
+    const setImg = function(i){
+      slideImg.src = images[i];
+      activateDot(i);
+    }
+    const createDots = function(){
+      images.forEach(function(s,i){
+          dotsContainer.insertAdjacentHTML('beforeend',`<div class="dot" data-slide="${i}"></div>`);
+      })
+    }
+    const activateDot = function(i){
+      document.querySelectorAll(`.dot`).forEach(function(dot){
+          dot.classList.remove('dot--active');
+          
+      })
+      document.querySelector(`.dot[data-slide="${i}"]`).classList.add('dot--active');
+      
+    }
+    createDots();
+    activateDot(0);
+    document.addEventListener('keydown',function(e){
+      (e.key === 'ArrowLeft') && prevImg();
+      (e.key === 'ArrowRight') && nextImg();
+    })
+    dotsContainer.addEventListener('click',function(e){
+      e.target.classList.add('dot--active');      
+         const i = e.target.getAttribute('data-slide');
+         setImg(i);
+    })
+    
+      function openMenu() {
+      sideBar.style.display = "flex";
+      overlay.style.display ="block";
+      overlay.addEventListener('click',function(){
+      sideBar.style.display = "none";
+      overlay.style.display="none";
+      })
+      }
+     
+    function closeMenu(){
+         sideBar.style.display = "none";
+          overlay.style.display="none"; 
+    }
+    
+    
+    
+    
+    
+    gsap.from(".img-most-visited", {duration: 1, scale: 1.2});
+    gsap.from(".img-most-visited", {duration: 1, x: 50});
+    gsap.from(".img-most-visited", {duration: 1, opacity: 0.3});
+    </script>
+    </body>
+    </html>
 </body>
 </html>
