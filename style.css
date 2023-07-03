@@ -12,7 +12,7 @@ body {
 }
 .fa-search{
     border-color: #0072B8;
-    width: 160px;
+    width: 150px;
     height:30px;
     outline: none;
     border-radius: 10px;
@@ -86,10 +86,11 @@ body {
 .most-visited-products{
     display: flex;
     justify-content: center;
-    align-items: center;   
+    align-items: center; 
+    padding: 2%;  
 }
 .img-most-visited{
-    width: 90%;
+    width: 200px;
     cursor: pointer;   
 }
 .product-categories:hover li { opacity:0.5; }
@@ -173,7 +174,10 @@ body {
 }
 .right-header{   
     height: 90px;
+    flex: 1;
+
 }
+
 .right--header--menu{
     list-style-type: none;
     flex-direction: column;
@@ -189,8 +193,8 @@ body {
 }
 #arma--header{
     display: flex;
-    align-items:center;
     justify-content:space-between;
+    align-items:center;
     width: 100%;
     height:90px;
     background-color: #ffffff;  
@@ -216,6 +220,7 @@ li{
 .overlay-icon{
     font-size: 24px;
 }
+
 .overlay-product{
     justify-content: space-evenly;
     align-items: center;
@@ -229,6 +234,7 @@ li{
     opacity: 0;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
+
 .product:hover .overlay-product{
     opacity: 1;
 }
@@ -301,6 +307,8 @@ li{
 }
 #logo--header{  
     height:90px;
+    align-self: center;
+    
   
 }
 .slider{
@@ -338,16 +346,19 @@ li{
 }
 .left-header{
     display: flex;
-    justify-content: space-between;
-    align-items: center;  
+    justify-content: flex-end; 
+    flex: 1;
 }
 .menu-icon{
     position: absolute;
     top:5%;
     right: 2%;
 }
-.menu-item-left-header,.menu-item-left-header-1{
-    padding:1.2em 1.5em;    
+.menu-item-left-header{
+    padding:0.7em 0.9em;    
+}
+.menu-item-left-header-1{
+    padding: 0.7em;
 }
 
 #arrow-btn-right{   
@@ -495,6 +506,9 @@ li{
 
 .most-visited-products{
    margin: 0 auto;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
 }
 .links-footer{
     margin:40px 0  10px 0;

@@ -21,8 +21,10 @@ const myHeader = `<nav class="right-header">
   </li>
 </ul>
 </nav>
-
+<div id="logo-container">
 <img src="./assets/images/logo.webp" id="logo--header" />
+</div>
+
 <div class="left-header">
  <div class="menu-item-left-header-1">
    <a href="#">

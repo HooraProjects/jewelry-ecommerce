@@ -53,7 +53,8 @@
                     <button class="btn-filter">فیلتر</button>
                 </div>               
             </div>
-            <div class="product-list">             
+            <div class="product-list">   
+               
                 <div class="col col-1"></div>
                 <div class="col col-2"> </div>
                 <div class="col col-3"></div>
@@ -177,13 +178,14 @@
             <img src=${product.src} data-src=${product.dataSrc} class="features-img lazy-img">
             <div class="overlay-product">
                 <i class="fa-regular fa-heart" class="overlay-icon" title="افزودن به علاقه مندی"></i>
-                <i class="fa-solid fa-magnifying-glass" class="overlay-icon"  title="مشاهده سریع"></i>
+                <i class="fa-solid fa-magnifying-glass" class="overlay-icon"  title="مشاهده سریع" ></i>
                 <i class="fa-solid fa-cart-shopping" class="overlay-icon" title="افزودن به سبد خرید"></i>
                 </div>
             <p>${product.name}</p> 
             <p>${product.price}  تومان</p>
             </div>
             `);      
+        
      productColOne.innerHTML =  item[0]+item[1]+item[2];
      productColTwo.innerHTML = item[3]+item[4]+item[5];
      productColThree.innerHTML = item[6]+item[7]+item[8];
