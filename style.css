@@ -17,16 +17,17 @@
 }
 html, 
 body {
-    margin: 0;
-    padding: 0;
     width: 100%;
-    height: 100%;
+    min-height: 100vh;
+    margin: 0px;
+    padding: 0px;
     font-family: 'Yekan';
+    
 }
 
 .fa-search{
     border-color: #0072B8;
-    width: 150px;
+    width: 50%;
     height:30px;
     outline: none;
     border-radius: 10px;
@@ -35,14 +36,14 @@ body {
 }
 .fa-search::placeholder{
     color: #0072B8;
-    font-size: 15px;
+    font-size: 0.9rem;
     padding: 2%;
 }
 
 
 .fa-phone-flip, .fa-whatsapp, .fa-envelope, .fa-clock{
     cursor: pointer;
-    padding:20px;
+    padding:2%;
     font-size: 1.9rem;
     color:#EE3160;
     
@@ -50,14 +51,17 @@ body {
 
 .btn-filter{
     cursor: pointer;
-    width:75px;
+    width:40%;
     height: 35px;
     border-radius: 10px;
     border: none;
-    padding: 0 20px;
+    padding: 0 0.4em;
     background-color:transparent;
-    border: 1px solid black;
+    border: 1px solid #123440;
     font-weight: bold;
+}
+#close-icon-filter{
+    color: white;
 }
 
 
@@ -66,7 +70,7 @@ body {
     list-style-type: none;
     flex-direction: column;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    width:270px;
+    width:17%;
     height: 100vh;
     margin-top:0;
     background-color: white;
@@ -88,7 +92,7 @@ body {
     padding: 2%;  
 }
 .img-most-visited{
-    width: 200px;
+    width: 20%;
     cursor: pointer;   
 }
 .product-categories:hover li { opacity:0.5; }
@@ -108,22 +112,22 @@ body {
     width:100%;
 }
 .shop-top-sidebar .product-categories .cat-item{
- padding: 15px 30px;
+ padding: 0.4em 1.1em;
 }
 
 .orderby{
     outline: none;
-    width: 250px;
+    width: 100%;
     height: 45px;
     padding:0.8em 0.6em;
     border-radius: 25px;
-    font-size: 15px;
+    font-size: 1rem;
     cursor: pointer;
 }
 .filter-content h4{
     background-color: #1d4f62;
     color: white;
-    padding: 4px;
+    padding: 0.4em;
     text-align: center;
     width: 100%;
 }
@@ -135,7 +139,7 @@ body {
     padding:10px 110px;
 }
 .orderby option {
-    width: 240px;
+    width: 150%;
     padding: 10px 15px;
     height: 0.25em;
     cursor: pointer;
@@ -152,8 +156,8 @@ body {
   margin:1% auto;
 }
 .product{
-    height: 310px;
-    margin-bottom: 18%;
+    width: 40%;
+    margin-bottom: 10%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -185,8 +189,8 @@ body {
     flex-direction: column;
     margin-top: 0;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    width:320px;
-    height: 100%;
+    width:20%;
+    height: 100vh;
     background-color: white;
     position: fixed;
     top: 0;
@@ -219,27 +223,9 @@ li{
     cursor: pointer;    
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
-.overlay-icon{
-    font-size: 24px;
-}
 
-.overlay-product{
-    justify-content: space-evenly;
-    align-items: center;
-    display: flex;
-    position: absolute;
-    left: 22%;
-    bottom:8%;
-    width: 165px;
-    height: 42px;
-    background-color:#f8f7f7;
-    opacity: 0;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-}
 
-.product:hover .overlay-product{
-    opacity: 1;
-}
+
 .product p{
     margin-bottom:0.28em;
 }
@@ -322,8 +308,8 @@ li{
     left:0;    
 }
 .slide > img{
-    min-width:100vw;
-    min-height: 100vh;
+    min-width:100%;
+    
 }
 .arrow-btn-slider{ 
     background: rgba(255, 255, 255, 0.568);
@@ -354,8 +340,8 @@ li{
 .menu-item-left-header{
     padding:0.7em 0.9em;    
 }
-.menu-item-left-header-1{
-    padding: 0.7em;
+.menu-item-left-header a{
+    text-decoration: none;
 }
 
 #arrow-btn-right{   
@@ -553,7 +539,6 @@ li{
 
 }
 
-
 .contact-option-item{
     position:relative;
     top:30%;
@@ -572,6 +557,7 @@ li{
     display: flex;
     width: 100%;
     justify-content: space-between;
+    align-items: center;
 }
 #contact-email{
     text-decoration: underline;
@@ -588,7 +574,14 @@ li{
 
 /* media queries */
 @media (max-width:480px){
-
+ 
 
 }
 
+@media (min-width:481px) and (max-width:768px){
+
+}
+
+@media (min-width:769px) and (max-width:1200px){
+
+}

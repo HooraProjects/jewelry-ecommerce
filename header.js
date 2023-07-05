@@ -26,17 +26,16 @@ const myHeader = `<nav class="right-header">
 </div>
 
 <div class="left-header">
- <div class="menu-item-left-header-1">
+ <div class="menu-item-left-header">
    <a href="#">
     <input type="text"  class="fas fa-search" placeholder="&#xf002">
    </a>
-
- </div>
-<a href="#" class="menu-item-left-header">
-            <i class="fa-solid fa-user"></i>
-          </a>
+   <a href="#" class="menu-item-left-header">
+   <i class="fa-solid fa-user"></i>
+ </a>
 <a href="#" class="menu-item-left-header"
-  ><i class="fa-solid fa-cart-shopping"></i
-></a>
+><i class="fa-solid fa-cart-shopping"></i></a>
+ </div>
+
 </div>`
 document.getElementById('arma--header').innerHTML = myHeader;

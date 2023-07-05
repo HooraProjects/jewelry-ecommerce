@@ -43,7 +43,7 @@
             <div class="filter-sidebar">
                 <div class="filter-content">
                     <div class="filter-content-top">
-                        <a class="close-icon-filter" onclick="closeFilterBar()"><i class="fa-solid fa-xmark"></i></a>
+                        <a class="close-icon-filter" onclick="closeFilterBar()"><i class="fa-solid fa-xmark" id="close-icon-filter"></i></a>
                 <h4>فیلتر بر اساس قیمت</h4>    
                     </div>
                     <div class="price-label">
@@ -176,11 +176,6 @@
                      
           const item  = products.map(product=> `<div class="product">
             <img src=${product.src} data-src=${product.dataSrc} class="features-img lazy-img">
-            <div class="overlay-product">
-                <i class="fa-regular fa-heart" class="overlay-icon" title="افزودن به علاقه مندی"></i>
-                <i class="fa-solid fa-magnifying-glass" class="overlay-icon"  title="مشاهده سریع" ></i>
-                <i class="fa-solid fa-cart-shopping" class="overlay-icon" title="افزودن به سبد خرید"></i>
-                </div>
             <p>${product.name}</p> 
             <p>${product.price}  تومان</p>
             </div>
