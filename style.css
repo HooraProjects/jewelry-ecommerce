@@ -136,7 +136,7 @@ body {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    padding:10px 110px;
+    padding:10px 70px;
 }
 .orderby option {
     width: 150%;
@@ -156,18 +156,19 @@ body {
   margin:1% auto;
 }
 .product{
-    width: 40%;
-    margin-bottom: 10%;
+    width:74%;
+    margin-bottom: 4%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     position: relative;  
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
 }
 .product-list{
   display: grid;
-  grid-template-columns: 33.3% 33.3% 33.3%;
-}
+  grid-template-columns: 33.33% 33.33% 33.33%;
+} 
 .col{
   display: flex;
   flex-direction: column;
@@ -218,10 +219,10 @@ li{
 }
 .lazy-img{
     position: relative;
-    width:300px;
-    height:300px;
+    width:375px;
+    height:375px;
     cursor: pointer;    
-    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    
 }
 
 
@@ -330,7 +331,7 @@ li{
 .left-header{
     display: flex;
     justify-content: flex-end; 
-    flex: 1;
+    flex:1;
 }
 .menu-icon{
     position: absolute;
@@ -338,7 +339,7 @@ li{
     right: 2%;
 }
 .menu-item-left-header{
-    padding:0.7em 0.9em;    
+    padding:5px 15px;    
 }
 .menu-item-left-header a{
     text-decoration: none;
