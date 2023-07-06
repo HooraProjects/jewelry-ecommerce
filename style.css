@@ -25,6 +25,11 @@ body {
     
 }
 
+  
+html{
+    scroll-behavior: smooth;
+}
+
 .fa-search{
     border-color: #0072B8;
     width: 50%;
