@@ -1,8 +1,5 @@
 'use strict';
-const sideBar = document.querySelector('.right--header--menu');
-sideBar.style.display = "none";
-const overlay = document.querySelector('.overlay');
-overlay.style.display="none";
+
 
 
 

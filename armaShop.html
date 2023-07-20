@@ -2,222 +2,329 @@
 <html lang="fa-IR" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="./assets/images/logoIcon.webp">
+    <link rel="icon" type="image/x-icon" href="./assets/images/logoIcon.webp">   
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
     <link rel="stylesheet" href="./style.css">
     <title>فروشگاه</title>
 </head>
 <body>
-    <div class="overlay"></div>
-    <header id="arma--header" role="banner">  
+    <div class="container container-shop">
         
-        </header>
-        <script src="./header.js"></script>
-        <script src="./script.js" ></script>
-        
-         <div class="shop-top-sidebar">
-                <ul class="product-categories">
-                    <li class="cat-item" data-id="1"><a href="#">آویز</a></li>
-                    <li class="cat-item" data-id="2"><a href="#">انگشتر</a></li>
-                    <li class="cat-item" data-id="3"><a href="#">حلقه</a></li>
-                    <li class="cat-item" data-id="4"><a href="#">دستبند</a></li>
-                    <li class="cat-item" data-id="5"><a href="#">گردنبند</a></li>
-                    <li class="cat-item" data-id="6"><a href="#">گوشواره</a></li>
-                </ul>
+       <header id="arma-header" role="banner">
+        <nav class="right-header">
+          <a id="menu-icon"><i class="fa-solid fa-bars"></i></a>
+         
+          </nav>           
+          <div id="logo-container">
+            <img src="./assets/images/logo.webp" id="logo--header" />
             </div>
-           <div class="result">
-            <i class="fa-solid fa-filter" onclick="showFilterBar()"></i>
-            <div class="select">
-                <select name="orderby" class="orderby">
-                    <option value="popularity">مرتب سازی بر اساس محبوب ترین</option>
-                    <option value="price">مرتب سازی بر اساس ارزان ترین</option>
-                    <option value="price-desc">مرتب سازی بر اساس گران ترین</option>
-                    <option value="rating">مرتب سازی بر اساس امتیاز</option>
-                </select>
-            </div>        
-        </div>
-        <div class="container--shop container">
-            <div class="filter-sidebar">
-                <div class="filter-content">
-                    <div class="filter-content-top">
-                        <a class="close-icon-filter" onclick="closeFilterBar()"><i class="fa-solid fa-xmark" id="close-icon-filter"></i></a>
-                <h4>فیلتر بر اساس قیمت</h4>    
-                    </div>
-                    <div class="price-label">
-                        قیمت :۰ تومان  -  ۱۵۰۰۰۰۰۰۰۰   
-                  </div>      
-                    <input type="range" min="0" max="100" value="0" class="range-slider" id="myRange" step="1">
-                    <button class="btn-filter">فیلتر</button>
-                </div>               
-            </div>
-            <div class="product-list">              
-                <div class="col col-1"></div>
-                <div class="col col-2"> </div>
-                <div class="col col-3"></div>
-            </div>
-        </div>      
-           
-        <footer id="footer"> </footer>
-        <script src="./footer.js"></script>  
-        <script>
-        'use strict';
-            const filterSidebar = document.querySelector('.filter-sidebar');
-            const filterIcon = document.querySelector('.fa-filter');
-            const closeFilterIcon = document.querySelector('.close-icon-filter');
-            const rangeSlider = document.getElementById('myRange');
-            const orderby = document.querySelector('.orderby');
-            const productColOne  = document.querySelector('.col-1');
-            const productColTwo  = document.querySelector('.col-2');
-            const productColThree  = document.querySelector('.col-3');
-            let products = [
-                {
-                      id:1,
-                      src:'./assets/images/necklace-shop-lazy.webp',
-                      dataSrc:'./assets/images/necklace.webp',
-                      name:'گردنبند طرح گل',
-                      price:'۵۵,۰۰۰,۰۰۰',
-                      popularity:1,
-                      rating:5
-
-                },
-                {
-                    id:2,
-                    src:'./assets/images/earring2-shop-lazy.webp',
-                    dataSrc:'./assets/images/earring2--shop.webp',
-                    name:'گوشواره مروارید طلا زرد',
-                    price:'۲۵,۰۰۰,۰۰۰',
-                    popularity:5,
-                    rating:3
-                },
-                {
-                    id:3,
-                    src:'./assets/images/necklace2-shop-lazy.webp',
-                    dataSrc:'./assets/images/necklace2-shop.webp',
-                    name:'گردنبند سه زنجیره با سنگ فیروزه',
-                    price:'۶۵,۰۰۰,۰۰۰',
-                    popularity:3,
-                    rating:4
-                },
-                {
-                    id:4,
-                    src:'./assets/images/earring1-shop-lazy.webp',
-                    dataSrc:'./assets/images/earring1-shop.webp',
-                    name:'گوشواره طرح گل',
-                    price:'۲۰,۰۰۰,۰۰۰',
-                    popularity:4,
-                    rating:4
-                },
-                {
-                    id:5,
-                    src:'./assets/images/ring1-shop-lazy.webp',
-                    dataSrc:'./assets/images/ring1-shop.webp',
-                    name:'انگشتر دوحلقه ای',
-                    price:'۳۵,۰۰۰,۰۰۰',
-                    popularity:2,
-                    rating:5
-                },
-                {
-                    id:6,
-                    src:'./assets/images/rings1-shop-lazy.webp',
-                    dataSrc:'./assets/images/rings1-shop.webp',
-                    name:'ست حلقه طلا سفید',
-                    price:'۷۰,۰۰۰,۰۰۰',
-                    popularity:6,
-                    rating:3
-                },
-                {
-                    id:7,
-                    src:'./assets/images/bracelet1-shop-lazy.webp',
-                    dataSrc:'./assets/images/bracelet1-shop.webp',
-                    name:'دستبند طلا زرد و طلا سفید',
-                    price:'۴۰,۰۰۰,۰۰۰',
-                    popularity:7,
-                    rating:4
-                },
-                
-                {
-                    id:8,
-                    src:'./assets/images/rings2-shop-lazy.webp',
-                    dataSrc:'./assets/images/rings2-shop.webp',
-                    name:'ست حلقه طلا زرد و طلا سفید',
-                    price:'۷۵,۰۰۰,۰۰۰',
-                    popularity:8,
-                    rating:2
-                },
-                {
-                    id:9,
-                    src:'./assets/images/bracelet2-shop-lazy.webp',
-                    dataSrc:'./assets/images/bracelet2-shop.webp',
-                    name:'دستبند طلا زرد',
-                    price:'۶۰,۰۰۰,۰۰۰',
-                    popularity:9,
-                    rating:1
-                }
-               
-            ]
-            rangeSlider.addEventListener('input',function(e){
-               // console.log(e.target.value);
-            })
-            filterSidebar.style.display = "none";
-            overlay.style.display="none"
-            sideBar.style.display = "none";   
-            function showFilterBar(){
-                filterSidebar.style.display = "flex";
-            }
-             
-             function closeFilterBar(){
-                filterSidebar.style.display="none";
-             }
-        
-                     
-          const item  = products.map(product=> `<div class="product">
-            <img src=${product.src} data-src=${product.dataSrc} class="features-img lazy-img">
-            <p>${product.name}</p> 
-            <p>${product.price}  تومان</p>
-            </div>
-            `);      
-
+             </header>
+            
+             <ul class="right-header-menu">
+              <a id="close-icon" ><i class="fa-solid fa-xmark"></i></a>
+              <li><a href="./index.html" class="menu-item active" id="menu-item-1">آرما </a></li>        
+              <li>
+                <a href="./armaShop.html" class="menu-item" id="menu-item-2"> فروشگاه </a>
+              </li>        
+              <li>
+                <a href="./armaAbout.html" class="menu-item" id="menu-item-3" >درباره ما</a>
+              </li>  
+              <hr class="sidebar-seperator">         
+              <li>
+                <a href="./armaContactUs.html" class="menu-item" id="menu-item-4" >تماس با ما</a >
+              </li>  
+              
+                <li>
+                  <a href="#" class="menu-item" id="menu-item-6" >ثبت نام</a>
+                </li>  
+                <li>
+                  <a href="#" class="menu-item" id="menu-item-7" >ورود</a>
+                </li>
+                <div class="icon-item">
+                    <li>
+                      <a href="#" class="menu-item" id="menu-item-7" ><i class="fa-solid fa-magnifying-glass"></i></a>
+                    </li> 
+                    <li>
+                      <a href="#" class="menu-item" id="menu-item-8" ><i class="fa-solid fa-cart-shopping"></i></a>
+                    </li> 
+                    
           
+                  </div>
+                  
+            </ul>
+       <div class="shop-top-sidebar">
+        <ul class="product-categories">
+            <li class="cat-item" data-id="1"><a href="#">آویز</a></li>
+            <li class="cat-item" data-id="2"><a href="#">انگشتر</a></li>
+            <li class="cat-item" data-id="3"><a href="#">حلقه</a></li>
+            <li class="cat-item" data-id="4"><a href="#">دستبند</a></li>
+            <li class="cat-item" data-id="5"><a href="#">گردنبند</a></li>
+            <li class="cat-item" data-id="6"><a href="#">گوشواره</a></li>
+        </ul>
+    </div>
+    <div class="result">
+        <i class="fa-solid fa-filter" onclick="showFilterBar()"></i>
+        <div class="select-result">
+            <select name="orderby" class="orderby">
+                <option value="popularity">مرتب سازی بر اساس محبوب ترین</option>
+                <option value="price">مرتب سازی بر اساس ارزان ترین</option>
+                <option value="price-desc">مرتب سازی بر اساس گران ترین</option>
+                <option value="rating">مرتب سازی بر اساس امتیاز</option>
+            </select>
+        </div>        
+    </div>
+    <div class="filter-sidebar">
+        <div class="filter-content">
+            <div class="filter-content-top">
+                <a class="close-icon-filter" onclick="closeFilterBar()"><i class="fa-solid fa-xmark" id="close-icon-filter"></i></a>
+        <h4>فیلتر بر اساس قیمت</h4>    
+            </div>
+            <div class="price-label">
+                قیمت :۰ تومان  -  ۱۵۰۰۰۰۰۰۰۰   
+          </div>      
+            <input type="range" min="0" max="100" value="0" class="range-slider" id="myRange" step="1">
+            <button class="btn-filter">فیلتر</button>
+        </div>               
+    </div>
+    <div class="product-list">              
+        <div class="col col-1"></div>
+        <div class="col col-2"> </div>
+        <div class="col col-3"></div>
+        <div class="col col-4"></div>
+    </div>
+</div>
+<footer>
+    <div class="wpb-wrapper join-club-footer-wrapper">
+        <div class="join-club-footer-title"><p>عضویت در خبرنامه</p></div>
+        <div class="join-club-footer">
+        <input type="email" placeholder="ایمیل شما">
+        <input type="submit" value="عضویت" class="btn-submit-footer" >
+        </div>
+        <div class="footer-icons">
+            <i class="fa-brands fa-telegram"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-whatsapp"></i>
+            <i class="fa-brands fa-pinterest"></i>
+            <i class="fa-brands fa-facebook"></i>
+        </div>
+        </div>
+       
+    <div class="wpb-wrapper link-wrapper-footer">
+        <div class="links-footer">
+        <a href="#" class="links-footer-item"> چواهرات آرما</a>
+        <a href="#" class="links-footer-item">تضمین برگشت / معاوضه کالا</a>
+        <a href="#" class="links-footer-item">باشگاه مشتریان</a>
+        <a href="#" class="links-footer-item">درباره ما / تماس با ما</a>
+        </div>
         
-     productColOne.innerHTML =  item[0]+item[1]+item[2];
-     productColTwo.innerHTML = item[3]+item[4]+item[5];
-     productColThree.innerHTML = item[6]+item[7]+item[8];
-      // lazy loading images
-  const imageTargets = document.querySelectorAll('img[data-src]');
-  let imageOptions ={
+        <div class="copyright-footer"><small>تمامی حقوق مادی و معنوی این وبسایت متعلق به جواهری آرما می‌باشد</small></div>
+        </div>
+        
+       
+</footer>
 
-            };
+<script>
+    'use strict';
+        const filterSidebar = document.querySelector('.filter-sidebar');
+        const closeIcon = document.querySelector('#close-icon');
+        const filterIcon = document.querySelector('.fa-filter');
+        const closeFilterIcon = document.querySelector('.close-icon-filter');
+        const rangeSlider = document.getElementById('myRange');
+        const orderby = document.querySelector('.orderby');
+        const productColOne  = document.querySelector('.col-1');
+        const productColTwo  = document.querySelector('.col-2');
+        const productColThree  = document.querySelector('.col-3');
+        const productColForth = document.querySelector('.col-4');
+        const sideBar = document.querySelector('.right-header-menu');
+      const menuIcon = document.querySelector('#menu-icon');
+      menuIcon.addEventListener('click',function(){
+        sideBar.classList.add('show-hamburger-menu');
+
+      })
+      closeIcon.addEventListener('click',function(){
+        sideBar.classList.remove('show-hamburger-menu');
+      })
+        let products = [
+            {
+                  id:1,
+                  src:'./assets/images/necklace-shop-lazy.webp',
+                  dataSrc:'./assets/images/necklace.webp',
+                  name:'گردنبند طرح گل',
+                  price:'۵۵,۰۰۰,۰۰۰',
+                  popularity:1,
+                  rating:'۵'
+
+            },
+            {
+                id:2,
+                src:'./assets/images/diamonds-rings-lazy.webp',
+                dataSrc:'./assets/images/diamond-rings.webp',
+                name:'گوشواره مروارید طلا زرد',
+                price:'۲۵,۰۰۰,۰۰۰',
+                popularity:5,
+                rating:'۳'
+            },
+            {
+                id:3,
+                src:'./assets/images/diamonds-rings-lazy.webp',
+                dataSrc:'./assets/images/diamond-rings.webp',
+                name:'گردنبند سه زنجیره با سنگ فیروزه',
+                price:'۶۵,۰۰۰,۰۰۰',
+                popularity:3,
+                rating:'۴'
+            },
+            {
+                id:4,
+                src:'./assets/images/earring1-shop-lazy.webp',
+                dataSrc:'./assets/images/earring1-shop.webp',
+                name:'گوشواره طرح گل',
+                price:'۲۰,۰۰۰,۰۰۰',
+                popularity:4,
+                rating:'۳'
+            },
+            {
+                id:5,
+                src:'./assets/images/diamonds-rings-lazy.webp',
+                dataSrc:'./assets/images/diamond-rings.webp',
+                name:'انگشتر دوحلقه ای',
+                price:'۳۵,۰۰۰,۰۰۰',
+                popularity:2,
+                rating:'۵'
+            },
+            {
+                id:6,
+                src:'./assets/images/rings1-shop-lazy.webp',
+                dataSrc:'./assets/images/rings1-shop.webp',
+                name:'ست حلقه طلا سفید',
+                price:'۷۰,۰۰۰,۰۰۰',
+                popularity:6,
+                rating:'۳'
+            },
+            {
+                id:7,
+                src:'./assets/images/bracelet1-shop-lazy.webp',
+                dataSrc:'./assets/images/bracelet1-shop.webp',
+                name:'دستبند طلا زرد و طلا سفید',
+                price:'۴۰,۰۰۰,۰۰۰',
+                popularity:7,
+                rating:'۲'
+            },
+            
+            {
+                id:8,
+                src:'./assets/images/diamonds-rings-lazy.webp',
+                dataSrc:'./assets/images/diamond-rings.webp',
+                name:'ست حلقه طلا سفید',
+                price:'۷۵,۰۰۰,۰۰۰',
+                popularity:8,
+                rating:2
+            },
+            {
+                id:9,
+                src:'./assets/images/diamonds-rings-lazy.webp',
+                dataSrc:'./assets/images/diamond-rings.webp',
+                name:'دستبند طلا زرد',
+                price:'۶۰,۰۰۰,۰۰۰',
+                popularity:9,
+                rating:'۱'
+            }
+            ,
+            {
+                id:10,
+                src:'./assets/images/diamonds-rings-lazy.webp',
+                dataSrc:'./assets/images/diamond-rings.webp',
+                name:'دستبند طلا زرد',
+                price:'۶۰,۰۰۰,۰۰۰',
+                popularity:7,
+                rating:'۳'
+            },
+            {
+                id:11,
+                src:'./assets/images/diamonds-rings-lazy.webp',
+                dataSrc:'./assets/images/diamond-rings.webp',
+                name:'دستبند طلا زرد',
+                price:'۶۰,۰۰۰,۰۰۰',
+                popularity:6,
+                rating:'۳'
+            },
+            {
+                id:12,
+                src:'./assets/images/diamonds-rings-lazy.webp',
+                dataSrc:'./assets/images/diamond-rings.webp',
+                name:'دستبند طلا زرد',
+                price:'۶۰,۰۰۰,۰۰۰',
+                popularity:6,
+                rating:'۴'
+            },
+           
+           
+        ]
+        rangeSlider.addEventListener('input',function(e){
+           // console.log(e.target.value);
+        })
+        filterSidebar.style.display = "none";
+        function showFilterBar(){
+            filterSidebar.style.display = "flex";
+        }
+         
+         function closeFilterBar(){
+            filterSidebar.style.display="none";
+         }
+    
+                 
+      const item  = products.map(product=> `<div class="product">
+        <img src=${product.src} data-src=${product.dataSrc} class="lazy-img">
+        <span class="add-icon"><i class="fa-solid fa-cart-plus"></i></span>
+
+        <p>${product.name}</p> 
+        <div class="rate-container"><span class="rate">${product.rating}</span><i class="fa-solid fa-star"></i></div>
+        
+        
+        <p class="product-price">${product.price}  تومان</p>
+        </div>
+        `);      
+
+      
+ 
+    
+ productColOne.innerHTML =  item[0]+item[1]+item[2];
+ productColTwo.innerHTML = item[3]+item[4]+item[5];
+ productColThree.innerHTML = item[6]+item[7]+item[8];
+ productColForth.innerHTML = item[9]+item[10]+item[11];
+  // lazy loading images
+const imageTargets = document.querySelectorAll('img[data-src]');
+let imageOptions ={
+
+        };
 let observer = new IntersectionObserver((entries,observer)=>{
-    entries.forEach(entry=>{
-        if(!entry.isIntersecting) return;
-        const image = entry.target;
-        const newUrl = image.getAttribute('data-src');
-    image.src = newUrl;
-    observer.unobserve(image);
-    })
+entries.forEach(entry=>{
+    if(!entry.isIntersecting) return;
+    const image = entry.target;
+    const newUrl = image.getAttribute('data-src');
+image.src = newUrl;
+observer.unobserve(image);
+})
 },imageOptions);
 
 imageTargets.forEach((image)=>{
-    observer.observe(image);
+observer.observe(image);
 })
 
 orderby.addEventListener('change',function(){
-    if(orderby.value ==='popularity'){   
-    }
-    if(orderby.value ==='price'){
+if(orderby.value ==='popularity'){   
+}
+if(orderby.value ==='price'){
 
-    }
-    if(orderby.value ==='price-desc'){
+}
+if(orderby.value ==='price-desc'){
 
-    }
-    if(orderby.value ==='rating'){
+}
+if(orderby.value ==='rating'){
 
-    }
+}
 
 })
- </script>
+</script>
 </body>
 </html>
