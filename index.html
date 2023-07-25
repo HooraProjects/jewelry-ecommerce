@@ -38,18 +38,16 @@
             <a href="./armaContactUs.html" class="menu-item" id="menu-item-4" >تماس با ما</a >
           </li>  
           
-            <li>
-              <a href="#" class="menu-item" id="menu-item-5" >ثبت نام</a>
-            </li>  
-            <li>
-              <a href="#" class="menu-item" id="menu-item-6" >ورود</a>
-            </li>
+          <li>
+            <a href="#" class="icon-nav" id="menu-item-5" onclick="newLogin()"><i class="fa-regular fa-user"></i></a>
+          </li>  
+          
             <div class="icon-item">
               <li>
-                <a href="#" class="menu-item" id="menu-item-7" ><i class="fa-solid fa-magnifying-glass"></i></a>
+                <a href="#" class="menu-item" id="menu-item-6" ><i class="fa-solid fa-magnifying-glass"></i></a>
               </li> 
               <li>
-                <a href="#" class="menu-item" id="menu-item-8" ><i class="fa-solid fa-cart-shopping"></i></a>
+                <a href="#" class="menu-item" id="menu-item-7" ><i class="fa-solid fa-cart-shopping"></i></a>
               </li> 
               
     
@@ -146,6 +144,10 @@
       const sideBar = document.querySelector('.right-header-menu');
       const menuIcon = document.querySelector('#menu-icon');
       const closeIcon = document.querySelector('#close-icon');
+      const popupLogin = document.querySelector('.new-login');
+      const newLogin = function(){
+          popupLogin.style.display= "flex"
+      }
       menuIcon.addEventListener('click',function(){
         console.log('yes');
         sideBar.classList.add('show-hamburger-menu');
@@ -165,7 +167,9 @@
     clickable: true,
   },
 });
-
+const closeLoginPopUp = function(){
+  popupLogin.style.display = "none";
+}
   
 
        

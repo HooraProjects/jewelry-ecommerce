@@ -125,6 +125,82 @@ html{
 .most-visited-title{
     align-self: center;
     margin:1.6em 0;
+    font-size: 18px;
+
+}
+.new-login p{
+    line-height: 10px;
+}
+input[type="checkbox"]{
+    display: inline-block;
+    vertical-align: middle;
+}
+.remember{
+   
+    display: inline-block;
+    vertical-align: middle;
+}
+#email-login-validation::placeholder,#password-login-validation::placeholder{
+    font-family: 'Yekan';
+}
+
+#email-login-validation,#password-login-validation{
+    width:100%;
+    height: 40px;
+    padding: 2px 8px 1px 3px;
+    background-color: #f4f4f6;
+    border: none;
+    font-size: 15px;
+    border-radius: 5px;
+    color:#9898a4;
+    outline: none;
+}
+#close-icon-login{
+    position: absolute;
+    top: 2%;
+    left: 2%;
+    cursor: pointer;
+}
+.new-login{
+    box-shadow: -2px 0 0.15em rgba(0, 0, 0, 0.199);
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width:505px;
+    height: 100vh;
+    background-color: white;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 150;
+    display: none;
+    padding:2%;
+    
+}
+.btn-account{
+    background-color: white;
+    height: 45px;
+    width: 100%;
+    border: 1px solid black;
+    font-family: 'Yekan';
+    font-size: 18px;
+
+}
+.register-text{
+    font-weight: bold;
+}
+.btn-login{
+    font-family: 'Yekan';
+
+
+
+    border: none;
+    font-size:18px;
+    background-color: #7F7F7F;
+    color: white;
+    width: 100%;
+    height: 45px;
 }
 .most-visited-products{
     display: flex;
@@ -422,6 +498,10 @@ width:150px;
     right: 2%;
     
 }
+.menu-item,.icon-nav{
+    display:inline-block;
+    
+  }
 .menu-item{
     display:inline-block;
     
@@ -439,7 +519,17 @@ width:150px;
     
 }
 
+  /* .menu-item:hover::after {
+    width: 100%;
+    
+} */
+.menu-item:hover:not(.active)::after{
+    width: 100%;
+}
 
+#menu-item-5:hover,#menu-item-6:hover,#menu-item-7:hover{
+   color:#828282;
+}
 #close-icon{
     display: none;
       text-align: left;
