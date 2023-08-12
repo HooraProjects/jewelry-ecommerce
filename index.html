@@ -88,10 +88,28 @@
         <div class="most-visited-products-container">       
           <h3 class="most-visited-title">محبوب ترین ها</h3>
           <div class="most-visited-products">
-            <img  class="img-most-visited" src="./assets/images/earring1-shop.webp">
-            <img  class="img-most-visited" src="./assets/images/bracelet1-shop.webp">
-            <img class="img-most-visited" src="./assets/images/rings1-shop.webp">
-            <img class="img-most-visited" src="./assets/images/necklace.webp">
+            <div class="most-visited-item">
+              <img  class="img-most-visited" src="./assets/images/earring1-shop.webp">
+              <p>گوشواره طرح گل</p>
+              <p>۵۵,۰۰۰,۰۰۰</p>
+            </div>
+            <div class="most-visited-item">
+              <img  class="img-most-visited" src="./assets/images/bracelet1-shop.webp">
+              <p>دستبند طلا زرد و سفید</p>
+              <p>۵۵,۰۰۰,۰۰۰</p>
+            </div>
+            <div class="most-visited-item">
+              <img class="img-most-visited" src="./assets/images/rings1-shop.webp">
+              <p>ست حلقه طلا زرد و سفید</p>
+              <p>۵۵,۰۰۰,۰۰۰</p>
+            </div>
+            
+            <div class="most-visited-item" >
+              <img class="img-most-visited" src="./assets/images/necklace.webp">
+              <p>گردنبند طرح گل</p>
+              <p>۵۵,۰۰۰,۰۰۰</p>
+            </div>
+           
           </div>
         </div>
    
@@ -99,14 +117,28 @@
     <div class="grouping-products">
       <h4>دسته بندی محصولات</h4>
       <div class="row">
-        <img src="./assets/images/diamond-rings.webp" class="img-group">
-        <img src="./assets/images/bracelet1-shop.webp" class="img-group">
-        <img src="./assets/images/bracelet1-shop.webp" class="img-group">
+        <div class="group-product-item">
+          <div id="img-group-1"></div>
+        </div>
+     <div class="group-product-item">
+      <div id="img-group-2"></div>
+     </div>
+        <div class="group-product-item">
+          <div id="img-group-3"></div>
+        </div>
+        
       </div>
       <div class="row">
-        <img src="./assets/images/rings1-shop.webp" class="img-group">
-        <img src="./assets/images/diamond-rings.jpg" class="img-group">
-        <img src="./assets/images/necklace.webp" class="img-group">
+        <div class="group-product-item">
+          <div id="img-group-4"></div>
+        </div>
+        <div class="group-product-item">
+          <div id="img-group-5"></div>
+        </div>
+        <div class="group-product-item">
+          <div id="img-group-6"></div>
+        </div>
+        
       </div>
     </div>
     <footer>
@@ -157,15 +189,17 @@
         sideBar.classList.remove('show-hamburger-menu');
       })
       var swiper = new Swiper('.swiper-container', {
-        direction: 'horizontal',
-        
-  slidesPerView: 1,
-
-  spaceBetween: 30,
+        effect:'fade',
+        autoplay:{
+          delay:2500,
+          disableOnInteraction:false
+        },
   pagination: {
     el: '.swiper-pagination',
     clickable: true,
   },
+  lazyLoading:true,
+  loop:true
 });
 const closeLoginPopUp = function(){
   popupLogin.style.display = "none";
